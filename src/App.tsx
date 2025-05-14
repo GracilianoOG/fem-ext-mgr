@@ -1,4 +1,3 @@
-import "./App.css";
 import { GlobalStyles } from "./components/styles/GlobalStyles.styled";
 
 function App() {
