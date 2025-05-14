@@ -1,7 +1,9 @@
+import { TitleStyled } from "./styles/Title.styled";
+
 const Main = () => {
   return (
     <main>
-      <h1>Extensions List</h1>
+      <TitleStyled>Extensions List</TitleStyled>
     </main>
   );
 };
