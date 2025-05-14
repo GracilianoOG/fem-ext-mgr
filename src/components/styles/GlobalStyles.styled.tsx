@@ -57,4 +57,8 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-display: swap;
   }
+
+  body {
+    background-color: var(--neutral-200);
+  }
 `;
