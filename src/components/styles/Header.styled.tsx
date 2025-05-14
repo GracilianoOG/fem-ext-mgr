@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
+  align-items: center;
   border-radius: 0.5rem;
   background-color: var(--neutral-0);
-  padding: 0.438rem 0.688rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 2.375rem;
+  padding: 0.438rem 0.688rem;
 
   button {
     --size: 3.125rem;
