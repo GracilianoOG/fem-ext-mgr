@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonStyled = styled.button`
+export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 22px;
   border: none;
   background-color: var(--neutral-0);
