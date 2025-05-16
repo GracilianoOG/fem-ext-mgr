@@ -1,4 +1,4 @@
-import logo from "../assets/images/logos/logo.svg";
+import logo from "/logos/logo.svg";
 import themeIcon from "../assets/images/icons/icon-moon.svg";
 import { HeaderStyled } from "./styles/Header.styled";
 
