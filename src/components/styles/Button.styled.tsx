@@ -15,3 +15,17 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
       color: var(--neutral-0);
     `}
 `;
+
+export const RemoveButtonStyled = styled(ButtonStyled)`
+  border: 1px solid var(--neutral-300);
+  color: var(--neutral-900);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 16px;
+
+  &:hover {
+    background-color: var(--red-700);
+    border-color: var(--red-700);
+    color: var(--neutral-0);
+  }
+`;
