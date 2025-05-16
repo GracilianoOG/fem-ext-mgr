@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CardListStyled = styled.ul`
   display: grid;
+  gap: 12px;
   grid-template-columns: 1fr;
 `;
 
