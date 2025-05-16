@@ -1,18 +1,11 @@
+import type { CardItemProps } from "../interfaces/CardItemProps";
 import { RemoveButtonStyled } from "./styles/Button.styled";
 import {
   CardListContentStyled,
   CardListItemStyled,
 } from "./styles/CardList.styled";
 
-const CardItem = ({
-  logo,
-  name,
-  description,
-}: {
-  logo: string;
-  name: string;
-  description: string;
-}) => {
+const CardItem = ({ logo, name, description }: CardItemProps) => {
   return (
     <CardListItemStyled>
       <CardListContentStyled>
