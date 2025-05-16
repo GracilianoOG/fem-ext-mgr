@@ -3,18 +3,25 @@ import {
   CardListContentStyled,
   CardListItemStyled,
 } from "./styles/CardList.styled";
-import img from "../assets/images/logos/logo-devlens.svg";
 
-const CardItem = () => {
+const CardItem = ({
+  logo,
+  name,
+  description,
+}: {
+  logo: string;
+  name: string;
+  description: string;
+}) => {
   return (
     <CardListItemStyled>
       <CardListContentStyled>
         <div>
-          <img src={img} alt="" />
+          <img src={logo} alt="" />
         </div>
         <div>
-          <h2>DevLens</h2>
-          <p>Quickly inspect page layouts and visualize element boundaries.</p>
+          <h2>{name}</h2>
+          <p>{description}</p>
         </div>
       </CardListContentStyled>
       <div>
