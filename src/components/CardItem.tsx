@@ -4,8 +4,9 @@ import {
   CardListContentStyled,
   CardListItemStyled,
 } from "./styles/CardList.styled";
+import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
 
-const CardItem = ({ logo, name, description }: CardItemProps) => {
+const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
   return (
     <CardListItemStyled>
       <CardListContentStyled>
@@ -17,8 +18,15 @@ const CardItem = ({ logo, name, description }: CardItemProps) => {
           <p>{description}</p>
         </div>
       </CardListContentStyled>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
         <RemoveButtonStyled>Remove</RemoveButtonStyled>
+        <ExtensionTogglerStyled $isActive={isActive}></ExtensionTogglerStyled>
       </div>
     </CardListItemStyled>
   );
