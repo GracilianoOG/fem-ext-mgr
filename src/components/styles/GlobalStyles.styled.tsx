@@ -61,5 +61,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--neutral-200);
     padding: 1.25rem 1rem;
+    display: flex;
+    justify-content: center;
   }
 `;
