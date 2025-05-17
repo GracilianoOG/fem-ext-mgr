@@ -1,11 +1,11 @@
 import type { CardItemProps } from "../interfaces/CardItemProps";
+import ExtensionToggler from "./ExtensionToggler";
 import { RemoveButtonStyled } from "./styles/Button.styled";
 import {
   CardItemInfoStyled,
   CardItemPanelStyled,
   CardItemStyled,
 } from "./styles/CardItem.styled";
-import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
 
 const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
   return (
@@ -21,7 +21,7 @@ const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
       </CardItemInfoStyled>
       <CardItemPanelStyled>
         <RemoveButtonStyled>Remove</RemoveButtonStyled>
-        <ExtensionTogglerStyled $isActive={isActive}></ExtensionTogglerStyled>
+        <ExtensionToggler isActive={isActive} />
       </CardItemPanelStyled>
     </CardItemStyled>
   );
