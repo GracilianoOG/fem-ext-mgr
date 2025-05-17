@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utils/mediaQueries";
 
 export const HeaderStyled = styled.header`
   align-items: center;
@@ -22,5 +23,11 @@ export const HeaderStyled = styled.header`
       display: block;
       margin: auto;
     }
+  }
+
+  ${mediaQueries.laptop} {
+    border-radius: 1.125rem;
+    padding: 0.625rem 1rem;
+    margin-bottom: 4.25rem;
   }
 `;
