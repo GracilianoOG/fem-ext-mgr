@@ -64,4 +64,8 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     justify-content: center;
   }
+
+  #root {
+    max-width: 1170px;
+  }
 `;
