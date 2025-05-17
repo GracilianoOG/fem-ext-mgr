@@ -13,4 +13,8 @@ export const ExtensionsFiltersStyled = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
+
+  ${mediaQueries.laptop} {
+    margin-bottom: 2rem;
+  }
 `;
