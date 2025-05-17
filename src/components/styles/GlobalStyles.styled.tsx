@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import nsRegular from "../../assets/fonts/static/NotoSans-Regular.ttf";
 import nsMedium from "../../assets/fonts/static/NotoSans-Medium.ttf";
 import nsBold from "../../assets/fonts/static/NotoSans-Bold.ttf";
+import { mediaQueries } from "../../utils/mediaQueries";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -63,6 +64,10 @@ export const GlobalStyles = createGlobalStyle`
     padding: 1.25rem 1rem;
     display: flex;
     justify-content: center;
+
+    ${mediaQueries.laptop} {
+      padding: 2.625rem 1rem;
+    }
   }
 
   #root {
