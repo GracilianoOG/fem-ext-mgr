@@ -61,6 +61,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: var(--neutral-200);
+    background-image: var(--light-gradient);
     padding: 1.25rem 1rem;
     display: flex;
     justify-content: center;
