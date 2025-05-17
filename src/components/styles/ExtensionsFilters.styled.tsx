@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utils/mediaQueries";
 
 export const ExtensionsFiltersStyled = styled.div`
   align-items: center;
@@ -8,7 +9,7 @@ export const ExtensionsFiltersStyled = styled.div`
   justify-content: center;
   margin-bottom: 42px;
 
-  @media screen and (min-width: 768px) {
+  ${mediaQueries.tablet} {
     flex-direction: row;
     justify-content: space-between;
   }
