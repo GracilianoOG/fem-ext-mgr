@@ -71,6 +71,10 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  button {
+    cursor: pointer;
+  }
+
   #root {
     max-width: 1170px;
   }
