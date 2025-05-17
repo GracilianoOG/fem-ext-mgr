@@ -1,15 +1,16 @@
 import type { CardItemProps } from "../interfaces/CardItemProps";
 import { RemoveButtonStyled } from "./styles/Button.styled";
 import {
-  CardListContentStyled,
-  CardListItemStyled,
-} from "./styles/CardList.styled";
+  CardItemInfoStyled,
+  CardItemPanelStyled,
+  CardItemStyled,
+} from "./styles/CardItem.styled";
 import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
 
 const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
   return (
-    <CardListItemStyled>
-      <CardListContentStyled>
+    <CardItemStyled>
+      <CardItemInfoStyled>
         <div>
           <img src={logo} alt="" />
         </div>
@@ -17,18 +18,12 @@ const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
           <h2>{name}</h2>
           <p>{description}</p>
         </div>
-      </CardListContentStyled>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
+      </CardItemInfoStyled>
+      <CardItemPanelStyled>
         <RemoveButtonStyled>Remove</RemoveButtonStyled>
         <ExtensionTogglerStyled $isActive={isActive}></ExtensionTogglerStyled>
-      </div>
-    </CardListItemStyled>
+      </CardItemPanelStyled>
+    </CardItemStyled>
   );
 };
 
