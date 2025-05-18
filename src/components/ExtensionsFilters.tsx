@@ -4,13 +4,12 @@ import { TitleStyled } from "./styles/Title.styled";
 import { FilterTypes } from "../enums/FilterTypes";
 import FilterButton from "./FilterButton";
 
-const ExtensionsFilters = ({
-  filter,
-  setFilter,
-}: {
+interface ExtensionsFiltersProps {
   filter: string;
   setFilter: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+}
+
+const ExtensionsFilters = ({ filter, setFilter }: ExtensionsFiltersProps) => {
   return (
     <ExtensionsFiltersStyled>
       <TitleStyled>Extensions List</TitleStyled>
