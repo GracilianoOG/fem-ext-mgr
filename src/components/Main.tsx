@@ -2,6 +2,7 @@ import ExtensionsFilters from "./ExtensionsFilters";
 import CardList from "./CardList";
 import { useState } from "react";
 import { FilterTypes } from "../enums/FilterTypes";
+import ExtensionProvider from "../providers/ExtensionProvider";
 
 const Main = () => {
   const [filter, setFilter] = useState<string>(FilterTypes.ALL);
@@ -9,7 +10,9 @@ const Main = () => {
   return (
     <main>
       <ExtensionsFilters filter={filter} setFilter={setFilter} />
-      <CardList filter={filter} />
+      <ExtensionProvider>
+        <CardList filter={filter} />
+      </ExtensionProvider>
     </main>
   );
 };
