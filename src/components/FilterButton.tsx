@@ -1,14 +1,16 @@
 import { ButtonStyled } from "./styles/Button.styled";
 
+interface FilterButtonProps {
+  selected: string;
+  btnFilter: string;
+  setSelected: (filter: string) => void;
+}
+
 const FilterButton = ({
   selected,
   btnFilter,
   setSelected,
-}: {
-  selected: string;
-  btnFilter: string;
-  setSelected: (filter: string) => void;
-}) => {
+}: FilterButtonProps) => {
   const handleClick = () => setSelected(btnFilter);
 
   return (
