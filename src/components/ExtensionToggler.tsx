@@ -1,12 +1,27 @@
-import { useState } from "react";
 import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
+import { useExtensions } from "../hooks/useExtensions";
 
-const ExtensionToggler = ({ isActive }: { isActive: boolean }) => {
-  const [isToggled, setIsToggled] = useState(isActive);
+const ExtensionToggler = ({
+  isActive,
+  extId,
+}: {
+  isActive: boolean;
+  extId: string;
+}) => {
+  const { setExtensions } = useExtensions();
 
-  const handleClick = () => setIsToggled(prevIsToggled => !prevIsToggled);
+  const handleClick = () =>
+    setExtensions(prevExtensions =>
+      prevExtensions.map(ext => {
+        if (ext.id === extId) {
+          return { ...ext, isActive: !isActive };
+        } else {
+          return ext;
+        }
+      })
+    );
 
-  return <ExtensionTogglerStyled onClick={handleClick} $isActive={isToggled} />;
+  return <ExtensionTogglerStyled onClick={handleClick} $isActive={isActive} />;
 };
 
 export default ExtensionToggler;
