@@ -7,7 +7,7 @@ import {
   CardItemStyled,
 } from "./styles/CardItem.styled";
 
-const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
+const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   return (
     <CardItemStyled>
       <CardItemInfoStyled>
@@ -21,7 +21,7 @@ const CardItem = ({ logo, name, description, isActive }: CardItemProps) => {
       </CardItemInfoStyled>
       <CardItemPanelStyled>
         <RemoveButtonStyled>Remove</RemoveButtonStyled>
-        <ExtensionToggler isActive={isActive} />
+        <ExtensionToggler extId={id} isActive={isActive} />
       </CardItemPanelStyled>
     </CardItemStyled>
   );
