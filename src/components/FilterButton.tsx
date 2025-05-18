@@ -3,7 +3,7 @@ import { ButtonStyled } from "./styles/Button.styled";
 interface FilterButtonProps {
   selected: string;
   btnFilter: string;
-  setSelected: (filter: string) => void;
+  setSelected: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const FilterButton = ({
