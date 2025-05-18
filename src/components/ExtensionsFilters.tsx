@@ -6,25 +6,25 @@ import { FilterTypes } from "../enums/FilterTypes";
 import FilterButton from "./FilterButton";
 
 const ExtensionsFilters = () => {
-  const [selected, setSelected] = useState<string>(FilterTypes.ALL);
+  const [filter, setFilter] = useState<string>(FilterTypes.ALL);
 
   return (
     <ExtensionsFiltersStyled>
       <TitleStyled>Extensions List</TitleStyled>
       <FiltersContainerStyled>
         <FilterButton
-          selected={selected}
-          setSelected={setSelected}
+          selected={filter}
+          setSelected={setFilter}
           btnFilter={FilterTypes.ALL}
         />
         <FilterButton
-          selected={selected}
-          setSelected={setSelected}
+          selected={filter}
+          setSelected={setFilter}
           btnFilter={FilterTypes.ACTIVE}
         />
         <FilterButton
-          selected={selected}
-          setSelected={setSelected}
+          selected={filter}
+          setSelected={setFilter}
           btnFilter={FilterTypes.INACTIVE}
         />
       </FiltersContainerStyled>
