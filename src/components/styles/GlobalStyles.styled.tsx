@@ -65,6 +65,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 1.25rem 1rem;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 
     ${mediaQueries.laptop} {
       padding: 2.625rem 1rem;
