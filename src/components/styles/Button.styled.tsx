@@ -7,6 +7,7 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   color: var(--neutral-900);
   font-size: 20px;
   padding: 8px 20px;
+  text-transform: capitalize;
 
   ${({ $selected }) =>
     $selected &&
