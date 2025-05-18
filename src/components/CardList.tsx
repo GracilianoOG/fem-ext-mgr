@@ -1,13 +1,10 @@
 import CardItem from "./CardItem";
 import { CardListStyled } from "./styles/CardList.styled";
-import data from "../data/data.json";
-import { useState } from "react";
 import { FilterTypes } from "../enums/FilterTypes";
+import { useExtensions } from "../hooks/useExtensions";
 
 const CardList = ({ filter }: { filter: string }) => {
-  const [extensions] = useState(
-    data.map(ext => ({ ...ext, id: self.crypto.randomUUID() }))
-  );
+  const { extensions } = useExtensions();
 
   const getExtensions = () => {
     if (filter === FilterTypes.ALL) {
