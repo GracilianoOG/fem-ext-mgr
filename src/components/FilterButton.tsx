@@ -1,4 +1,4 @@
-import { ButtonStyled } from "./styles/Button.styled";
+import { FilterButtonStyled } from "./styles/Button.styled";
 
 interface FilterButtonProps {
   selected: string;
@@ -14,9 +14,12 @@ const FilterButton = ({
   const handleClick = () => setSelected(btnFilter);
 
   return (
-    <ButtonStyled $selected={selected === btnFilter} onClick={handleClick}>
+    <FilterButtonStyled
+      $selected={selected === btnFilter}
+      onClick={handleClick}
+    >
       {btnFilter}
-    </ButtonStyled>
+    </FilterButtonStyled>
   );
 };
 
