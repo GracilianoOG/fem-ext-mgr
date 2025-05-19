@@ -36,6 +36,7 @@ export const RemoveButtonStyled = styled(ButtonStyled)`
   font-size: 15px;
   font-weight: 500;
   padding: 8px 16px;
+  transition: background-color 0.2s, border-color 0.2s;
 
   &:hover {
     background-color: var(--red-700);
