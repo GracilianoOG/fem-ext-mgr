@@ -13,12 +13,21 @@ export const FilterButtonStyled = styled(ButtonStyled)`
   border: none;
   font-size: 20px;
   padding: 8px 20px;
+  transition: background-color 0.2s, opacity 0.2s;
+  &:hover {
+    opacity: 0.75;
+  }
 
   ${({ $selected }) =>
     $selected &&
     css`
       background-color: var(--red-700);
       color: var(--neutral-0);
+
+      &:hover {
+        background-color: var(--red-500);
+        opacity: 1;
+      }
     `}
 `;
 
