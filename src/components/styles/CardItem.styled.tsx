@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { shadow } from "./common.styled";
 
 export const CardItemStyled = styled.li`
+  ${shadow};
   background-color: white;
   border-radius: 20px;
   display: flex;

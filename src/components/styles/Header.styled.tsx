@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../utils/mediaQueries";
+import { shadow } from "./common.styled";
 
 export const HeaderStyled = styled.header`
+  ${shadow};
   align-items: center;
   border-radius: 0.5rem;
   background-color: var(--neutral-0);
