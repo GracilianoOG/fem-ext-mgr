@@ -1,6 +1,6 @@
 import type { CardItemProps } from "../interfaces/CardItemProps";
 import ExtensionToggler from "./ExtensionToggler";
-import { RemoveButtonStyled } from "./styles/Button.styled";
+import RemoveButton from "./RemoveButton";
 import {
   CardItemInfoStyled,
   CardItemPanelStyled,
@@ -20,7 +20,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
         </div>
       </CardItemInfoStyled>
       <CardItemPanelStyled>
-        <RemoveButtonStyled>Remove</RemoveButtonStyled>
+        <RemoveButton extId={id} />
         <ExtensionToggler extId={id} isActive={isActive} />
       </CardItemPanelStyled>
     </CardItemStyled>
