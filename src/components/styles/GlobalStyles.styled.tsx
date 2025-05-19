@@ -78,5 +78,6 @@ export const GlobalStyles = createGlobalStyle`
 
   #root {
     max-width: 1170px;
+    width: 100%;
   }
 `;
