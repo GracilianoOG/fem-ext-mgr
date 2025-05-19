@@ -2,12 +2,15 @@ import styled, { css } from "styled-components";
 
 export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 22px;
-  border: none;
   background-color: var(--neutral-0);
   color: var(--neutral-900);
+  text-transform: capitalize;
+`;
+
+export const FilterButtonStyled = styled(ButtonStyled)`
+  border: none;
   font-size: 20px;
   padding: 8px 20px;
-  text-transform: capitalize;
 
   ${({ $selected }) =>
     $selected &&
@@ -19,7 +22,6 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
 
 export const RemoveButtonStyled = styled(ButtonStyled)`
   border: 1px solid var(--neutral-300);
-  color: var(--neutral-900);
   font-size: 15px;
   font-weight: 500;
   padding: 8px 16px;
