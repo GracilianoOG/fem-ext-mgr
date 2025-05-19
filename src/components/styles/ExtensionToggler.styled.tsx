@@ -23,6 +23,10 @@ export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
     $isActive &&
     css`
       background-color: var(--red-700);
+
+      &:hover {
+        background-color: var(--red-500);
+      }
     `}
 
   &::before {
