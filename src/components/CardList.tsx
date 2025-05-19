@@ -2,6 +2,7 @@ import CardItem from "./CardItem";
 import { CardListStyled } from "./styles/CardList.styled";
 import { FilterTypes } from "../enums/FilterTypes";
 import { useExtensions } from "../hooks/useExtensions";
+import { EmptyMessageStyled } from "./styles/EmptyMessage.styled";
 
 const CardList = ({ filter }: { filter: string }) => {
   const { extensions } = useExtensions();
@@ -16,12 +17,16 @@ const CardList = ({ filter }: { filter: string }) => {
     }
   };
 
-  return (
+  const visibleExtensions = getExtensions();
+
+  return visibleExtensions.length ? (
     <CardListStyled>
-      {getExtensions().map(item => (
+      {visibleExtensions.map(item => (
         <CardItem key={item.id} {...item} />
       ))}
     </CardListStyled>
+  ) : (
+    <EmptyMessageStyled>{filter} list is empty!</EmptyMessageStyled>
   );
 };
 
