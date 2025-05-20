@@ -3,13 +3,13 @@ import { shadow } from "./common.styled";
 
 export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 22px;
-  background-color: ${({ theme }) => theme.colors.btnBgColor};
   color: ${({ theme }) => theme.colors.btnColor};
   text-transform: capitalize;
 `;
 
 export const FilterButtonStyled = styled(ButtonStyled)`
   ${shadow};
+  background-color: ${({ theme }) => theme.colors.filterBtnBgColor};
   border: none;
   font-size: 20px;
   padding: 8px 20px;
@@ -32,6 +32,7 @@ export const FilterButtonStyled = styled(ButtonStyled)`
 `;
 
 export const RemoveButtonStyled = styled(ButtonStyled)`
+  background-color: ${({ theme }) => theme.colors.removeBtnBgColor};
   border: 1px solid ${({ theme }) => theme.colors.removeBtnBorderColor};
   font-size: 15px;
   font-weight: 500;
