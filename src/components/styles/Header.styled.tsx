@@ -6,7 +6,7 @@ export const HeaderStyled = styled.header`
   ${shadow};
   align-items: center;
   border-radius: 0.5rem;
-  background-color: var(--neutral-0);
+  background-color: ${({ theme }) => theme.colors.headerBgColor};
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.375rem;
@@ -14,7 +14,7 @@ export const HeaderStyled = styled.header`
 
   button {
     --size: 3.125rem;
-    background-color: var(--neutral-100);
+    background-color: ${({ theme }) => theme.colors.themeBtnBgColor};
     border: none;
     border-radius: 0.75rem;
     cursor: pointer;
@@ -28,7 +28,7 @@ export const HeaderStyled = styled.header`
     }
 
     &:hover {
-      background-color: var(--neutral-300);
+      background-color: ${({ theme }) => theme.colors.themeBtnBgColorHover};
     }
   }
 
