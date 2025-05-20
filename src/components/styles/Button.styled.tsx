@@ -3,8 +3,8 @@ import { shadow } from "./common.styled";
 
 export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 22px;
-  background-color: var(--neutral-0);
-  color: var(--neutral-900);
+  background-color: ${({ theme }) => theme.colors.btnBgColor};
+  color: ${({ theme }) => theme.colors.btnColor};
   text-transform: capitalize;
 `;
 
@@ -21,26 +21,26 @@ export const FilterButtonStyled = styled(ButtonStyled)`
   ${({ $selected }) =>
     $selected &&
     css`
-      background-color: var(--red-700);
-      color: var(--neutral-0);
+      background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
+      color: ${({ theme }) => theme.colors.filterBtnColorSel};
 
       &:hover {
-        background-color: var(--red-500);
+        background-color: ${({ theme }) => theme.colors.filterBtnColorSelHover};
         opacity: 1;
       }
     `}
 `;
 
 export const RemoveButtonStyled = styled(ButtonStyled)`
-  border: 1px solid var(--neutral-300);
+  border: 1px solid ${({ theme }) => theme.colors.removeBtnBorderColor};
   font-size: 15px;
   font-weight: 500;
   padding: 8px 16px;
   transition: background-color 0.2s, border-color 0.2s;
 
   &:hover {
-    background-color: var(--red-700);
-    border-color: var(--red-700);
-    color: var(--neutral-0);
+    background-color: ${({ theme }) => theme.colors.removeBtnBgColorHover};
+    border-color: ${({ theme }) => theme.colors.removeBtnBorderColorHover};
+    color: ${({ theme }) => theme.colors.removeBtnColorHover};
   }
 `;
