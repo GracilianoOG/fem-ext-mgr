@@ -25,6 +25,7 @@ interface ITheme {
     themeBtnBgColor: string;
     themeBtnBgColorHover: string;
   };
+  boxShadow: string;
 }
 
 const lightTheme: ITheme = {
@@ -54,6 +55,7 @@ const lightTheme: ITheme = {
     themeBtnBgColor: "var(--neutral-100)",
     themeBtnBgColorHover: "var(--neutral-300)",
   },
+  boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)",
 };
 
 const darkTheme: ITheme = {
@@ -83,6 +85,7 @@ const darkTheme: ITheme = {
     themeBtnBgColor: "var(--neutral-700)",
     themeBtnBgColorHover: "var(--neutral-600)",
   },
+  boxShadow: "0 0 1px var(--neutral-0)",
 };
 
 export { lightTheme, darkTheme };
