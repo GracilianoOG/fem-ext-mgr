@@ -83,3 +83,4 @@ const darkTheme: ITheme = {
 };
 
 export { lightTheme, darkTheme };
+export type { ITheme };
