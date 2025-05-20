@@ -3,7 +3,7 @@ import { shadow } from "./common.styled";
 
 export const CardItemStyled = styled.li`
   ${shadow};
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.cardBgColor};
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -23,13 +23,13 @@ export const CardItemInfoStyled = styled.div`
   }
 
   h2 {
-    color: var(--neutral-900);
+    color: ${({ theme }) => theme.colors.cardTitleColor};
     font-size: 20px;
     margin-bottom: 5px;
   }
 
   p {
-    color: var(--neutral-700);
+    color: ${({ theme }) => theme.colors.cardDescColor};
     font-size: 15px;
     line-height: 1.5;
   }
