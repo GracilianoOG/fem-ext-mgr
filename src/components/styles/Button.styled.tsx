@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { shadow } from "./common.styled";
 
 export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 22px;
@@ -8,7 +7,7 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
 `;
 
 export const FilterButtonStyled = styled(ButtonStyled)`
-  ${shadow};
+  box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.filterBtnBgColor};
   border: none;
   font-size: 20px;
@@ -21,6 +20,7 @@ export const FilterButtonStyled = styled(ButtonStyled)`
   ${({ $selected }) =>
     $selected &&
     css`
+      box-shadow: none;
       background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
       color: ${({ theme }) => theme.colors.filterBtnColorSel};
 
