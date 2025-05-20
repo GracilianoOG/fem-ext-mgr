@@ -12,7 +12,7 @@ export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
 
   border: none;
   border-radius: var(--toggle-radius);
-  background-color: var(--neutral-300);
+  background-color: ${({ theme }) => theme.colors.togglerBgColor};
   cursor: pointer;
   height: var(--toggle-height);
   position: relative;
@@ -22,16 +22,17 @@ export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
   ${({ $isActive }) =>
     $isActive &&
     css`
-      background-color: var(--red-700);
+      background-color: ${({ theme }) => theme.colors.togglerActiveBgColor};
 
       &:hover {
-        background-color: var(--red-500);
+        background-color: ${({ theme }) =>
+          theme.colors.togglerActiveBgColorHover};
       }
     `}
 
   &::before {
     border-radius: 50%;
-    background-color: var(--neutral-0);
+    background-color: ${({ theme }) => theme.colors.togglerKnobBgColor};
     content: "";
     height: var(--knob-size);
     inset: 0;
