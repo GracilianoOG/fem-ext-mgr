@@ -70,7 +70,7 @@ const darkTheme: ITheme = {
     cardBgColor: "var(--neutral-800)",
     cardTitleColor: "var(--neutral-0)",
     cardDescColor: "var(--neutral-300)",
-    emptyMsgColor: "var(--neutral-900)",
+    emptyMsgColor: "var(--neutral-0)",
     filterBtnBgColor: "var(--neutral-700)",
     filterBtnBgColorSel: "var(--red-400)",
     filterBtnColorSel: "var(--neutral-900)",
