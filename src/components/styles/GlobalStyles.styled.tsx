@@ -82,6 +82,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #root {
+    display: flex;
+    flex-direction: column;
     max-width: 1170px;
     width: 100%;
   }
