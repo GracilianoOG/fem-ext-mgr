@@ -11,6 +11,7 @@ interface ITheme {
     filterBtnBgColorSel: string;
     filterBtnColorSel: string;
     filterBtnColorSelHover: string;
+    focusColor: string;
     headerBgColor: string;
     removeBtnBorderColor: string;
     removeBtnBgColor: string;
@@ -41,6 +42,7 @@ const lightTheme: ITheme = {
     filterBtnBgColorSel: "var(--red-700)",
     filterBtnColorSel: "var(--neutral-0)",
     filterBtnColorSelHover: "var(--red-500)",
+    focusColor: "var(--red-500)",
     headerBgColor: "var(--neutral-0)",
     removeBtnBorderColor: "var(--neutral-300)",
     removeBtnBgColor: "var(--neutral-0)",
@@ -71,6 +73,7 @@ const darkTheme: ITheme = {
     filterBtnBgColorSel: "var(--red-400)",
     filterBtnColorSel: "var(--neutral-900)",
     filterBtnColorSelHover: "var(--red-500)",
+    focusColor: "var(--red-400)",
     headerBgColor: "var(--neutral-800)",
     removeBtnBorderColor: "var(--neutral-600)",
     removeBtnBgColor: "var(--neutral-800)",
