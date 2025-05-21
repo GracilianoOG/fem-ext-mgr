@@ -18,6 +18,7 @@ interface ITheme {
     removeBtnBgColorHover: string;
     removeBtnBorderColorHover: string;
     removeBtnColorHover: string;
+    removeBtnColorFocus: string;
     titleColor: string;
     togglerBgColor: string;
     togglerActiveBgColor: string;
@@ -49,6 +50,7 @@ const lightTheme: ITheme = {
     removeBtnBgColorHover: "var(--red-700)",
     removeBtnBorderColorHover: "var(--red-700)",
     removeBtnColorHover: "var(--neutral-0)",
+    removeBtnColorFocus: "var(--neutral-100)",
     titleColor: "var(--neutral-900)",
     togglerBgColor: "var(--neutral-300)",
     togglerActiveBgColor: "var(--red-700)",
@@ -80,6 +82,7 @@ const darkTheme: ITheme = {
     removeBtnBgColorHover: "var(--red-400)",
     removeBtnBorderColorHover: "var(--red-400)",
     removeBtnColorHover: "var(--neutral-900)",
+    removeBtnColorFocus: "var(--neutral-600)",
     titleColor: "var(--neutral-0)",
     togglerBgColor: "var(--neutral-600)",
     togglerActiveBgColor: "var(--red-400)",
