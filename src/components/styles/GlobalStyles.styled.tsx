@@ -74,6 +74,11 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid ${({ theme }) => theme.colors.focusColor};
+      outline-offset: 2px;
+    }
   }
 
   #root {
