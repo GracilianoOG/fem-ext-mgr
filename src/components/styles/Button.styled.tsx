@@ -39,6 +39,11 @@ export const RemoveButtonStyled = styled(ButtonStyled)`
   padding: 8px 16px;
   transition: background-color 0.2s, border-color 0.2s;
 
+  &:focus-visible {
+    background-color: ${({ theme }) => theme.colors.removeBtnColorFocus};
+    border-color: ${({ theme }) => theme.colors.removeBtnColorFocus};
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.removeBtnBgColorHover};
     border-color: ${({ theme }) => theme.colors.removeBtnBorderColorHover};
