@@ -2,6 +2,6 @@ import styled from "styled-components";
 
 export const FiltersContainerStyled = styled.div`
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   justify-content: center;
 `;

@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const CardItemStyled = styled.li`
   box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.cardBgColor};
-  border-radius: 20px;
+  border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   list-style: none;
-  min-height: 200px;
-  padding: 20px;
+  min-height: 12.5rem;
+  padding: 1.25rem;
   width: 100%;
 `;
 
@@ -23,13 +23,13 @@ export const CardItemInfoStyled = styled.div`
 
   h2 {
     color: ${({ theme }) => theme.colors.cardTitleColor};
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-size: 1.25rem;
+    margin-bottom: 0.313rem;
   }
 
   p {
     color: ${({ theme }) => theme.colors.cardDescColor};
-    font-size: 15px;
+    font-size: 0.938rem;
     line-height: 1.5;
   }
 `;

@@ -1,11 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
-  --toggle-width: 36px;
-  --toggle-height: 20px;
-  --toggle-radius: 20px;
-  --knob-size: 16px;
-  --knob-offset: 2px;
+  --toggle-width: 2.25rem;
+  --toggle-height: 1.25rem;
+  --toggle-radius: 1.25rem;
+  --knob-size: 1rem;
+  --knob-offset: 0.125rem;
   --knob-active: calc(
     var(--toggle-width) - var(--knob-size) - var(--knob-offset) * 2
   );

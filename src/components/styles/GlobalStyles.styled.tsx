@@ -76,15 +76,15 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
 
     &:focus-visible {
-      outline: 2px solid ${({ theme }) => theme.colors.focusColor};
-      outline-offset: 2px;
+      outline: 0.125rem solid ${({ theme }) => theme.colors.focusColor};
+      outline-offset: 0.125rem;
     }
   }
 
   #root {
     display: flex;
     flex-direction: column;
-    max-width: 1170px;
+    max-width: 73.125rem;
     width: 100%;
   }
 `;

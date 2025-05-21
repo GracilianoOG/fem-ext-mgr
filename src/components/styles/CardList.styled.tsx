@@ -3,7 +3,7 @@ import { mediaQueries } from "../../utils/mediaQueries";
 
 export const CardListStyled = styled.ul`
   display: grid;
-  gap: 12px;
+  gap: 0.75rem;
   grid-template-columns: 1fr;
 
   ${mediaQueries.tablet} {
