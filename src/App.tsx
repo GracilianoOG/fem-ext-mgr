@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import { GlobalStyles } from "./components/styles/GlobalStyles.styled";
 import { useThemes } from "./hooks/useThemes";
 import { darkTheme, lightTheme } from "./utils/themes";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, toggleTheme] = useThemes();
@@ -14,6 +15,7 @@ function App() {
         <GlobalStyles />
         <Header theme={theme} toggleTheme={toggleTheme} />
         <Main />
+        <Footer />
       </ThemeProvider>
     </>
   );
