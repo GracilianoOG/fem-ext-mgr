@@ -9,8 +9,16 @@ interface ThemeTogglerProps {
 
 const ThemeToggler = ({ theme, toggleTheme }: ThemeTogglerProps) => {
   return (
-    <ThemeTogglerStyled onClick={toggleTheme}>
-      <img src={theme === "light" ? moonIcon : sunIcon} alt="" />
+    <ThemeTogglerStyled
+      onClick={toggleTheme}
+      aria-pressed={theme === "dark"}
+      aria-label="Toggle dark mode"
+    >
+      <img
+        src={theme === "light" ? moonIcon : sunIcon}
+        alt=""
+        aria-hidden="true"
+      />
     </ThemeTogglerStyled>
   );
 };
