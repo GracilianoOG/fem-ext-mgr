@@ -2,11 +2,12 @@ import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
 import { useExtensions } from "../hooks/useExtensions";
 
 interface ExtensionTogglerProps {
+  name: string;
   isActive: boolean;
   extId: string;
 }
 
-const ExtensionToggler = ({ isActive, extId }: ExtensionTogglerProps) => {
+const ExtensionToggler = ({ name, isActive, extId }: ExtensionTogglerProps) => {
   const { setExtensions } = useExtensions();
 
   const handleClick = () =>
@@ -25,7 +26,7 @@ const ExtensionToggler = ({ isActive, extId }: ExtensionTogglerProps) => {
       onClick={handleClick}
       $isActive={isActive}
       role="switch"
-      aria-label="Extension state"
+      aria-label={`${name} state`}
       aria-checked={isActive}
     />
   );
