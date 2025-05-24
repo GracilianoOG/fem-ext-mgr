@@ -20,7 +20,15 @@ const ExtensionToggler = ({ isActive, extId }: ExtensionTogglerProps) => {
       })
     );
 
-  return <ExtensionTogglerStyled onClick={handleClick} $isActive={isActive} />;
+  return (
+    <ExtensionTogglerStyled
+      onClick={handleClick}
+      $isActive={isActive}
+      role="switch"
+      aria-label="Extension state"
+      aria-checked={isActive}
+    />
+  );
 };
 
 export default ExtensionToggler;
