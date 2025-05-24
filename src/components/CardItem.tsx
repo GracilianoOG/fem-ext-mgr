@@ -20,7 +20,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
         </div>
       </CardItemInfoStyled>
       <CardItemPanelStyled>
-        <RemoveButton extId={id} />
+        <RemoveButton extId={id} name={name} />
         <ExtensionToggler extId={id} isActive={isActive} />
       </CardItemPanelStyled>
     </CardItemStyled>
