@@ -17,6 +17,7 @@ const FilterButton = ({
     <FilterButtonStyled
       $selected={selected === btnFilter}
       onClick={handleClick}
+      aria-pressed={selected === btnFilter}
     >
       {btnFilter}
     </FilterButtonStyled>
