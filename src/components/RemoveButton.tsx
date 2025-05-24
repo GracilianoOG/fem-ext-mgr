@@ -1,7 +1,7 @@
 import { useExtensions } from "../hooks/useExtensions";
 import { RemoveButtonStyled } from "./styles/Button.styled";
 
-const RemoveButton = ({ extId }: { extId: string }) => {
+const RemoveButton = ({ name, extId }: { name: string; extId: string }) => {
   const { setExtensions } = useExtensions();
 
   const handleClick = () =>
@@ -9,7 +9,11 @@ const RemoveButton = ({ extId }: { extId: string }) => {
       prevExtensions.filter(ext => ext.id !== extId)
     );
 
-  return <RemoveButtonStyled onClick={handleClick}>Remove</RemoveButtonStyled>;
+  return (
+    <RemoveButtonStyled onClick={handleClick} aria-label={`Remove ${name}`}>
+      <span aria-hidden="true">Remove</span>
+    </RemoveButtonStyled>
+  );
 };
 
 export default RemoveButton;
