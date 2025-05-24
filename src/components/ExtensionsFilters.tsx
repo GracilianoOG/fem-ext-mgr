@@ -14,21 +14,27 @@ const ExtensionsFilters = ({ filter, setFilter }: ExtensionsFiltersProps) => {
     <ExtensionsFiltersStyled>
       <TitleStyled>Extensions List</TitleStyled>
       <FiltersContainerStyled>
-        <FilterButton
-          selected={filter}
-          setSelected={setFilter}
-          btnFilter={FilterTypes.ALL}
-        />
-        <FilterButton
-          selected={filter}
-          setSelected={setFilter}
-          btnFilter={FilterTypes.ACTIVE}
-        />
-        <FilterButton
-          selected={filter}
-          setSelected={setFilter}
-          btnFilter={FilterTypes.INACTIVE}
-        />
+        <li>
+          <FilterButton
+            selected={filter}
+            setSelected={setFilter}
+            btnFilter={FilterTypes.ALL}
+          />
+        </li>
+        <li>
+          <FilterButton
+            selected={filter}
+            setSelected={setFilter}
+            btnFilter={FilterTypes.ACTIVE}
+          />
+        </li>
+        <li>
+          <FilterButton
+            selected={filter}
+            setSelected={setFilter}
+            btnFilter={FilterTypes.INACTIVE}
+          />
+        </li>
       </FiltersContainerStyled>
     </ExtensionsFiltersStyled>
   );
