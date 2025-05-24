@@ -11,8 +11,9 @@ const ThemeToggler = ({ theme, toggleTheme }: ThemeTogglerProps) => {
   return (
     <ThemeTogglerStyled
       onClick={toggleTheme}
-      aria-pressed={theme === "dark"}
-      aria-label="Toggle dark mode"
+      aria-checked={theme === "dark"}
+      aria-label="Dark mode"
+      role="switch"
     >
       <img
         src={theme === "light" ? moonIcon : sunIcon}
