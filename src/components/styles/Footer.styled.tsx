@@ -7,6 +7,7 @@ export const FooterStyled = styled.footer`
   margin-top: 7rem;
 
   a {
+    border-radius: 0.375rem;
     color: ${({ theme }) => theme.colors.footerLinkColor};
   }
 `;
