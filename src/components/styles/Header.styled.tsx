@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../utils/mediaQueries";
-import { shadow } from "./common.styled";
 
 export const HeaderStyled = styled.header`
-  ${shadow};
   align-items: center;
   border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   background-color: ${({ theme }) => theme.colors.headerBgColor};
   display: flex;
   justify-content: space-between;
