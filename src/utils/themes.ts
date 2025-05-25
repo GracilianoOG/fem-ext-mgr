@@ -97,7 +97,7 @@ const darkTheme: ITheme = {
     themeBtnBgColor: "var(--neutral-700)",
     themeBtnBgColorHover: "var(--neutral-600)",
   },
-  boxShadow: "0 0 1px var(--neutral-0)",
+  boxShadow: "0 0 2px var(--neutral-0)",
 };
 
 export { lightTheme, darkTheme };
