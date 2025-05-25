@@ -1,8 +1,18 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
 import nsRegular from "../../assets/fonts/static/NotoSans-Regular.ttf";
 import nsMedium from "../../assets/fonts/static/NotoSans-Medium.ttf";
 import nsBold from "../../assets/fonts/static/NotoSans-Bold.ttf";
 import { mediaQueries } from "../../utils/mediaQueries";
+
+const focusAim = keyframes`
+  0% {
+    outline-offset: 0.375rem;
+  }
+
+  100% {
+    outline-offset: 0.125rem;
+  }
+`;
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -77,6 +87,7 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
 
     &:focus-visible {
+      animation: ${focusAim} 0.4s ease-out;
       outline: 0.125rem solid ${({ theme }) => theme.colors.focusColor};
       outline-offset: 0.125rem;
     }
