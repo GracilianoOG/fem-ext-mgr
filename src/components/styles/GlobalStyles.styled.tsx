@@ -72,6 +72,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  a,
   button {
     cursor: pointer;
 
