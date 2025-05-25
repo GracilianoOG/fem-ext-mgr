@@ -5,6 +5,7 @@ import { FilterTypes } from "../enums/FilterTypes";
 import ExtensionProvider from "../providers/ExtensionProvider";
 import { MainStyled } from "./styles/Main.styled";
 import LiveRegionProvider from "../providers/LiveRegionProvider";
+import { VisuallyHidden } from "./styles/VisuallyHidden.styled";
 
 const Main = () => {
   const [filter, setFilter] = useState<string>(FilterTypes.ALL);
@@ -14,7 +15,10 @@ const Main = () => {
       <ExtensionsFilters filter={filter} setFilter={setFilter} />
       <ExtensionProvider>
         <LiveRegionProvider>
-          <CardList filter={filter} />
+          <section>
+            <VisuallyHidden as="h2">Available extensions</VisuallyHidden>
+            <CardList filter={filter} />
+          </section>
         </LiveRegionProvider>
       </ExtensionProvider>
     </MainStyled>
