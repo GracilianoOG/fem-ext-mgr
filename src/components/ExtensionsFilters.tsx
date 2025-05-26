@@ -3,6 +3,7 @@ import { FiltersContainerStyled } from "./styles/FiltersContainer.styled";
 import { TitleStyled } from "./styles/Title.styled";
 import { FilterTypes } from "../enums/FilterTypes";
 import FilterButton from "./FilterButton";
+import { VisuallyHidden } from "./styles/VisuallyHidden.styled";
 
 interface ExtensionsFiltersProps {
   filter: string;
@@ -12,7 +13,9 @@ interface ExtensionsFiltersProps {
 const ExtensionsFilters = ({ filter, setFilter }: ExtensionsFiltersProps) => {
   return (
     <ExtensionsFiltersStyled>
-      <TitleStyled>Extensions List</TitleStyled>
+      <TitleStyled>
+        Extensions List <VisuallyHidden as="span">Filters</VisuallyHidden>
+      </TitleStyled>
       <FiltersContainerStyled>
         <li>
           <FilterButton
