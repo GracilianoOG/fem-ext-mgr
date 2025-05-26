@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# 🗃️ Browser Extensions Manager UI (Frontend Mentor Challenge)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![App preview in different themes](./design/preview.jpg)
 
-Currently, two official plugins are available:
+## 📖 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+_A beautiful and interactive browser extension manager UI built as part of the Frontend Mentor challenge. In this project, users can filter, remove, and toggle extensions. Developed with React, TypeScript, and styled-components for a type-safe, clean, and component-based styling approach._
 
-## Expanding the ESLint configuration
+This is my first project developed with Typescript. It was fun discovering new ways to keep my code type-safe and cleaner. Dealing with constant squiggly lines was a little annoying, but it was worth it 😅. Last but not least, I tried to put as much focus as possible on the accessibility aspects of this project. I tested it with a screen reader (NVDA) in different browsers to make sure everything was working as intended.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🗂️ Local install
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+1. Clone this repository:
+
+```bash
+git clone https://github.com/GracilianoOG/fem-ext-mgr.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+npm install
 ```
+
+3. Run project locally:
+
+```bash
+npm run dev
+```
+
+## 🛠️ Developed with
+
+[![Toolset](https://skillicons.dev/icons?i=react,styledcomponents,ts,js,css,html)](https://skillicons.dev)
+
+- React
+- Typescript
+- Styled components
+- Custom properties
+
+## ✨ Features
+
+- Semantic HTML.
+- Accessible to screen readers.
+- Fully navigable via keyboard.
+- Responsive to different screen sizes.
+- Custom dark and light themes.
+
+## 🔗 Useful links
+
+- [Variable Font Fallback](https://pimpmytype.com/variable-font-fallback/)
+- [A Guide to Variable Fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [CSS Font Display Property](https://css-tricks.com/almanac/properties/f/font-display/)
+- [Styled Components API](https://styled-components.com/docs/api#styled)
+- [TypeScript Enums](https://www.typescriptlang.org/docs/handbook/enums.html#objects-vs-enums)
+- [React and TypeScript: Working with Props](https://www.kidancode.com/article/react-typescript-working-with-props-and-types-of-props)
+- [An Accessible Toggle](https://kittygiraudel.com/2021/04/05/an-accessible-toggle/)
+- [Using Images with Vite and Vue](https://medium.com/@andrewmasonmedia/how-to-use-images-with-vite-and-vue-937307a150c0)
+- [React and TypeScript](https://react.dev/learn/typescript)
+- [React Design Patterns: Provider Pattern](https://medium.com/@vitorbritto/react-design-patterns-provider-pattern-b273ba665158)
+- [TypeScript Basic Types](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [Styled Components and TypeScript](https://styled-components.com/docs/api#typescript)
+- [Stack Overflow: How to get the value of an input element](https://stackoverflow.com/a/79472338)
+- [Accessible Components: Cards](https://inclusive-components.design/cards/)
+- [Accessible Buttons](https://accessibleweb.dev/buttons)
+- [Accessible To-Do List](https://inclusive-components.design/a-todo-list/)
+- [Visually Hidden Technique](https://medium.com/web-dev-survey-from-kyoto/the-visually-hidden-technique-303f8e2bd409)
+- [Demystifying Accessibility in React Apps](https://www.youtube.com/watch?v=UHjt2A6CS6A)
+
+## 🧑🏻‍💻 Author
+
+- LinkedIn: [@gabrielgmbarros](https://www.linkedin.com/in/gabrielgmbarros)
+- GitHub: [@GracilianoOG](https://github.com/GracilianoOG)
