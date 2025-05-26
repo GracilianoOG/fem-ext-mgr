@@ -21,12 +21,6 @@ export const CardItemInfoStyled = styled.div`
     display: block;
   }
 
-  h2 {
-    color: ${({ theme }) => theme.colors.cardTitleColor};
-    font-size: 1.25rem;
-    margin-bottom: 0.313rem;
-  }
-
   p {
     color: ${({ theme }) => theme.colors.cardDescColor};
     font-size: 0.938rem;
@@ -38,4 +32,10 @@ export const CardItemPanelStyled = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+`;
+
+export const CardItemTitleStyled = styled.h3`
+  color: ${({ theme }) => theme.colors.cardTitleColor};
+  font-size: 1.25rem;
+  margin-bottom: 0.313rem;
 `;
