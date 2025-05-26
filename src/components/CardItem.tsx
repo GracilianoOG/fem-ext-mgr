@@ -5,6 +5,7 @@ import {
   CardItemInfoStyled,
   CardItemPanelStyled,
   CardItemStyled,
+  CardItemTitleStyled,
 } from "./styles/CardItem.styled";
 
 const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
@@ -15,7 +16,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
           <img src={logo} alt="" />
         </div>
         <div>
-          <h2>{name}</h2>
+          <CardItemTitleStyled>{name}</CardItemTitleStyled>
           <p>{description}</p>
         </div>
       </CardItemInfoStyled>
