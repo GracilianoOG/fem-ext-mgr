@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../utils/mediaQueries";
 
-export const ExtensionsFiltersStyled = styled.div`
+export const ExtensionsFiltersStyled = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
