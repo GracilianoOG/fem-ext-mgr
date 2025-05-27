@@ -20,17 +20,8 @@ export const GlobalStyles = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-family: "Noto Sans", sans-serif;
     margin: 0;
     padding: 0;
-  }
-
-  @supports (font-variation-settings: normal) {
-    *,
-    *::before,
-    *::after {
-      font-family: "Noto Sans VF", sans-serif;
-    }
   }
 
   :root {
@@ -92,12 +83,23 @@ export const GlobalStyles = createGlobalStyle`
     background-image: ${({ theme }) => theme.colors.bodyGrad};
     padding: 1.25rem 1rem;
     display: flex;
+    font-family: "Noto Sans", sans-serif;
     justify-content: center;
     min-height: 100vh;
 
     ${mediaQueries.laptop} {
       padding: 2.625rem 1rem;
     }
+  }
+
+  @supports (font-variation-settings: normal) {
+    body {
+      font-family: "Noto Sans VF", sans-serif;
+    }
+  }
+
+  button {
+    font-family: inherit;
   }
 
   a,
