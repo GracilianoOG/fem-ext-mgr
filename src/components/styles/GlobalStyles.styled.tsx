@@ -2,6 +2,7 @@ import { createGlobalStyle, keyframes } from "styled-components";
 import nsRegular from "../../assets/fonts/static/NotoSans-Regular.ttf";
 import nsMedium from "../../assets/fonts/static/NotoSans-Medium.ttf";
 import nsBold from "../../assets/fonts/static/NotoSans-Bold.ttf";
+import nsVariable from "../../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf";
 import { mediaQueries } from "../../utils/mediaQueries";
 
 const focusAim = keyframes`
@@ -24,6 +25,14 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  @supports (font-variation-settings: normal) {
+    *,
+    *::before,
+    *::after {
+      font-family: "Noto Sans VF", sans-serif;
+    }
+  }
+
   :root {
     /* Neutral Colors */
     --neutral-900: hsl(227, 75%, 14%);
@@ -43,6 +52,15 @@ export const GlobalStyles = createGlobalStyle`
     /* Gradients */
     --light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
     --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  }
+
+  @font-face {
+    font-family: "Noto Sans VF";
+    src: url("${nsVariable}") format("truetype");
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
