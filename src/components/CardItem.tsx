@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type { CardItemProps } from "../interfaces/CardItemProps";
 import ExtensionToggler from "./ExtensionToggler";
 import RemoveButton from "./RemoveButton";
@@ -28,4 +29,4 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   );
 };
 
-export default CardItem;
+export default memo(CardItem);
