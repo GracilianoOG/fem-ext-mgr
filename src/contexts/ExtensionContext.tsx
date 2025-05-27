@@ -6,10 +6,4 @@ interface IExtensionContext {
   setExtensions: React.Dispatch<React.SetStateAction<CardItemProps[]>>;
 }
 
-const defaultContextValue: IExtensionContext = {
-  extensions: [],
-  setExtensions: () => {},
-};
-
-export const ExtensionContext =
-  createContext<IExtensionContext>(defaultContextValue);
+export const ExtensionContext = createContext<IExtensionContext | null>(null);
