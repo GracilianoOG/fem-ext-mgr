@@ -14,7 +14,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
     <CardItemStyled>
       <CardItemInfoStyled>
         <div>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" width={60} height={60} />
         </div>
         <div>
           <CardItemTitleStyled>{name}</CardItemTitleStyled>
