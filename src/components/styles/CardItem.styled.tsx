@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const popIn = keyframes`
   0% {
@@ -12,7 +12,7 @@ const popIn = keyframes`
   }
 `;
 
-export const CardItemStyled = styled.li`
+export const CardItemStyled = styled.li<{ $isRemoved: boolean }>`
   animation: ${popIn} 0.35s forwards ease;
   box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.cardBgColor};
@@ -25,6 +25,12 @@ export const CardItemStyled = styled.li`
   opacity: 0;
   padding: 1.25rem;
   width: 100%;
+
+  ${({ $isRemoved }) =>
+    $isRemoved &&
+    css`
+      animation: ${popIn} 0.35s reverse forwards ease;
+    `}
 `;
 
 export const CardItemInfoStyled = styled.div`
