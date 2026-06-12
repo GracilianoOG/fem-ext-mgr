@@ -1,9 +1,11 @@
 import { createContext } from "react";
 import type { CardItemProps } from "../interfaces/CardItemProps";
 
-interface IExtensionContext {
+interface ExtensionContextValues {
   extensions: CardItemProps[];
   setExtensions: React.Dispatch<React.SetStateAction<CardItemProps[]>>;
 }
 
-export const ExtensionContext = createContext<IExtensionContext | null>(null);
+export const ExtensionContext = createContext<ExtensionContextValues | null>(
+  null,
+);
