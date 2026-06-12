@@ -9,7 +9,7 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
 export const FilterButtonStyled = styled(ButtonStyled)`
   box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.filterBtnBgColor};
-  border: none;
+  border: ${({ theme }) => theme.colors.filterBtnBgColor};
   font-size: 1.25rem;
   padding: 0.5rem 1.25rem;
   transition:
@@ -24,6 +24,7 @@ export const FilterButtonStyled = styled(ButtonStyled)`
     css`
       box-shadow: none;
       background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
+      border: ${({ theme }) => theme.colors.filterBtnBgColorSel};
       color: ${({ theme }) => theme.colors.filterBtnColorSel};
 
       &:hover {
