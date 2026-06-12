@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <Logo theme={theme} />
+      <Logo />
       <ThemeToggler theme={theme} toggleTheme={toggleTheme} />
     </HeaderStyled>
   );
