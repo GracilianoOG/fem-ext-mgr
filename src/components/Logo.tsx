@@ -1,7 +1,10 @@
 import logo from "/logos/logo.svg";
 import logoDark from "/logos/logo-dark.svg";
+import { useThemes } from "../hooks/useThemes";
 
-const Logo = ({ theme }: { theme: string }) => {
+const Logo = () => {
+  const { theme } = useThemes();
+
   return (
     <img
       src={theme === "light" ? logo : logoDark}
