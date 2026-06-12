@@ -8,8 +8,20 @@ import {
   CardItemStyled,
   CardItemTitleStyled,
 } from "./styles/CardItem.styled";
+import { useExtensions } from "../hooks/useExtensions";
+import { useLiveRegion } from "../hooks/useLiveRegion";
 
 const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
+  const { setExtensions } = useExtensions();
+  const { updateLiveRegion } = useLiveRegion();
+
+  const removeExtension = () => {
+    setExtensions((prevExtensions) =>
+      prevExtensions.filter((ext) => ext.id !== id),
+    );
+    updateLiveRegion(`Removed ${name} extension.`);
+  };
+
   return (
     <CardItemStyled>
       <CardItemInfoStyled>
@@ -22,7 +34,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
         </div>
       </CardItemInfoStyled>
       <CardItemPanelStyled>
-        <RemoveButton extId={id} name={name} />
+        <RemoveButton name={name} onClick={removeExtension} />
         <ExtensionToggler extId={id} isActive={isActive} name={name} />
       </CardItemPanelStyled>
     </CardItemStyled>
