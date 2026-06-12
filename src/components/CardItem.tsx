@@ -17,14 +17,20 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   const [isRemoved, setIsRemoved] = useState(false);
 
   const removeExtension = () => {
+    if (!isRemoved) return;
+
     setExtensions((prevExtensions) =>
       prevExtensions.filter((ext) => ext.id !== id),
     );
     updateLiveRegion(`Removed ${name} extension.`);
   };
 
+  const handleClick = () => {
+    setIsRemoved(true);
+  };
+
   return (
-    <CardItemStyled $isRemoved={isRemoved}>
+    <CardItemStyled $isRemoved={isRemoved} onAnimationEnd={removeExtension}>
       <CardItemInfoStyled>
         <div>
           <img src={logo} alt="" width={60} height={60} />
@@ -35,7 +41,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
         </div>
       </CardItemInfoStyled>
       <CardItemPanelStyled>
-        <RemoveButton name={name} onClick={removeExtension} />
+        <RemoveButton name={name} onClick={handleClick} />
         <ExtensionToggler extId={id} isActive={isActive} name={name} />
       </CardItemPanelStyled>
     </CardItemStyled>
