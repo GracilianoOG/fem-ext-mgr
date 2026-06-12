@@ -35,7 +35,7 @@ export const FilterButtonStyled = styled(ButtonStyled)`
 `;
 
 export const BorderButtonStyled = styled(ButtonStyled)`
-  background-color: ${({ theme }) => theme.colors.removeBtnBgColor};
+  background-color: transparent;
   border: 0.063rem solid ${({ theme }) => theme.colors.removeBtnBorderColor};
   font-size: 0.938rem;
   font-weight: 500;
