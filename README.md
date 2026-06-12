@@ -39,11 +39,13 @@ npm run dev
 
 ## ✨ Features
 
-- Semantic HTML.
-- Accessible to screen readers.
-- Fully navigable via keyboard.
-- Responsive to different screen sizes.
-- Custom dark and light themes.
+- Semantic HTML;
+- Accessible to screen readers;
+- Fully navigable via keyboard;
+- Responsive to different screen sizes;
+- Custom dark and light themes;
+- Custom transitions and animations;
+- Theme and Extensions are saved on Local Storage.
 
 ## 🔗 Useful links
 
