@@ -12,6 +12,18 @@ const popIn = keyframes`
   }
 `;
 
+const popOut = keyframes`
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+`;
+
 export const CardItemStyled = styled.li<{ $isRemoved: boolean }>`
   animation: ${popIn} 0.35s forwards ease;
   box-shadow: ${({ theme }) => theme.boxShadow};
@@ -29,7 +41,7 @@ export const CardItemStyled = styled.li<{ $isRemoved: boolean }>`
   ${({ $isRemoved }) =>
     $isRemoved &&
     css`
-      animation: ${popIn} 0.35s reverse forwards ease;
+      animation: ${popOut} 0.35s forwards ease;
     `}
 `;
 
