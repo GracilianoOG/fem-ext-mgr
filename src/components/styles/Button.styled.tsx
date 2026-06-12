@@ -64,3 +64,12 @@ export const DangerButtonStyled = styled(BorderButtonStyled)`
     opacity: 1;
   }
 `;
+
+export const RemoveButtonStyled = styled(BorderButtonStyled)`
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.removeBtnBgColorHover};
+    border-color: ${({ theme }) => theme.colors.removeBtnBorderColorHover};
+    color: ${({ theme }) => theme.colors.removeBtnColorHover};
+    opacity: 1;
+  }
+`;
