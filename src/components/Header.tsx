@@ -1,13 +1,11 @@
 import { HeaderStyled } from "./styles/Header.styled";
 import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
+import { useThemes } from "../hooks/useThemes";
 
-interface HeaderProps {
-  theme: string;
-  toggleTheme: () => void;
-}
+const Header = () => {
+  const { theme, toggleTheme } = useThemes();
 
-const Header = ({ theme, toggleTheme }: HeaderProps) => {
   return (
     <HeaderStyled>
       <Logo theme={theme} />
