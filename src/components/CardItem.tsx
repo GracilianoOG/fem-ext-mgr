@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import type { CardItemProps } from "../interfaces/CardItemProps";
 import ExtensionToggler from "./ExtensionToggler";
 import RemoveButton from "./RemoveButton";
@@ -14,6 +14,7 @@ import { useLiveRegion } from "../hooks/useLiveRegion";
 const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   const { setExtensions } = useExtensions();
   const { updateLiveRegion } = useLiveRegion();
+  const [isRemoved, setIsRemoved] = useState(false);
 
   const removeExtension = () => {
     setExtensions((prevExtensions) =>
@@ -23,7 +24,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   };
 
   return (
-    <CardItemStyled>
+    <CardItemStyled $isRemoved={isRemoved}>
       <CardItemInfoStyled>
         <div>
           <img src={logo} alt="" width={60} height={60} />
