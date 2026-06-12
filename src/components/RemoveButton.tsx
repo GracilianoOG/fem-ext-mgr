@@ -1,20 +1,13 @@
-import { useExtensions } from "../hooks/useExtensions";
-import { useLiveRegion } from "../hooks/useLiveRegion";
+import type { ButtonHTMLAttributes } from "react";
 import { RemoveButtonStyled } from "./styles/Button.styled";
 
-const RemoveButton = ({ name, extId }: { name: string; extId: string }) => {
-  const { setExtensions } = useExtensions();
-  const { updateLiveRegion } = useLiveRegion();
+interface RemoveButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  name: string;
+}
 
-  const handleClick = () => {
-    setExtensions(prevExtensions =>
-      prevExtensions.filter(ext => ext.id !== extId)
-    );
-    updateLiveRegion(`Removed ${name} extension.`);
-  };
-
+const RemoveButton = ({ name, ...props }: RemoveButtonProps) => {
   return (
-    <RemoveButtonStyled onClick={handleClick} aria-label={`Remove ${name}`}>
+    <RemoveButtonStyled {...props} aria-label={`Remove ${name}`}>
       <span aria-hidden="true">Remove</span>
     </RemoveButtonStyled>
   );
