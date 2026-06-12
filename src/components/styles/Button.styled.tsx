@@ -12,7 +12,9 @@ export const FilterButtonStyled = styled(ButtonStyled)`
   border: none;
   font-size: 1.25rem;
   padding: 0.5rem 1.25rem;
-  transition: background-color 0.2s, opacity 0.2s;
+  transition:
+    background-color 0.2s,
+    opacity 0.2s;
   &:hover {
     opacity: 0.75;
   }
@@ -31,13 +33,15 @@ export const FilterButtonStyled = styled(ButtonStyled)`
     `}
 `;
 
-export const RemoveButtonStyled = styled(ButtonStyled)`
+export const BorderButtonStyled = styled(ButtonStyled)`
   background-color: ${({ theme }) => theme.colors.removeBtnBgColor};
   border: 0.063rem solid ${({ theme }) => theme.colors.removeBtnBorderColor};
   font-size: 0.938rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 
   &:focus-visible {
     background-color: ${({ theme }) => theme.colors.removeBtnColorFocus};
