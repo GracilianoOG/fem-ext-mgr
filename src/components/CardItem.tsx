@@ -26,7 +26,9 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   };
 
   const handleClick = () => {
-    setIsRemoved(true);
+    if (confirm(`Delete ${name} extension from the list?`)) {
+      setIsRemoved(true);
+    }
   };
 
   return (
