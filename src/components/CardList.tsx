@@ -13,22 +13,22 @@ const CardList = ({ filter }: { filter: string }) => {
       if (filter === FilterTypes.ALL) {
         return extensions;
       } else if (filter === FilterTypes.ACTIVE) {
-        return extensions.filter(ext => ext.isActive);
+        return extensions.filter((ext) => ext.isActive);
       } else {
-        return extensions.filter(ext => !ext.isActive);
+        return extensions.filter((ext) => !ext.isActive);
       }
     },
-    [extensions]
+    [extensions],
   );
 
   const visibleExtensions = useMemo(
     () => getExtensions(filter),
-    [getExtensions, filter]
+    [getExtensions, filter],
   );
 
   return visibleExtensions.length ? (
     <CardListStyled>
-      {visibleExtensions.map(item => (
+      {visibleExtensions.map((item) => (
         <CardItem key={item.id} {...item} />
       ))}
     </CardListStyled>
