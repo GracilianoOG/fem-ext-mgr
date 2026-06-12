@@ -1,5 +1,7 @@
 import { useEffect, useState, type PropsWithChildren } from "react";
 import { ThemeContext, type Theme } from "../contexts/ThemeContext";
+import { ThemeProvider as SCThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "../utils/themes";
 
 const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<Theme>(() => {
@@ -24,7 +26,13 @@ const ThemeProvider = ({ children }: PropsWithChildren) => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  return <ThemeContext value={{ theme, toggleTheme }}>{children}</ThemeContext>;
+  return (
+    <ThemeContext value={{ theme, toggleTheme }}>
+      <SCThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        {children}
+      </SCThemeProvider>
+    </ThemeContext>
+  );
 };
 
 export default ThemeProvider;
