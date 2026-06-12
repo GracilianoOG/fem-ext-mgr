@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BorderButtonStyled, DangerButtonStyled } from "./styles/Button.styled";
 import styled from "styled-components";
 
@@ -40,23 +39,33 @@ const ConfirmModalButtonsStyled = styled.div`
   gap: 8px;
 `;
 
-export const ConfirmModal = () => {
-  const [isModal, setIsModal] = useState(true);
+interface ConfirmModalProps {
+  isVisible: boolean;
+  title: string;
+  description: string;
+  onConfirm: () => void;
+  onCancel: () => void;
+}
 
-  if (!isModal) {
+export const ConfirmModal = ({
+  isVisible,
+  title,
+  description,
+  onConfirm,
+  onCancel,
+}: ConfirmModalProps) => {
+  if (!isVisible) {
     return;
   }
 
   return (
     <ConfirmModalStyled>
       <div>
-        <h2>Confirm Modal</h2>
-        <p>Press the confirm button to confirm.</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
         <ConfirmModalButtonsStyled>
-          <BorderButtonStyled onClick={() => setIsModal(false)}>
-            Cancel
-          </BorderButtonStyled>
-          <DangerButtonStyled>Remove</DangerButtonStyled>
+          <BorderButtonStyled onClick={onCancel}>Cancel</BorderButtonStyled>
+          <DangerButtonStyled onClick={onConfirm}>Remove</DangerButtonStyled>
         </ConfirmModalButtonsStyled>
       </div>
     </ConfirmModalStyled>
