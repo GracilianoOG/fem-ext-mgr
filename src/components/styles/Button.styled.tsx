@@ -1,5 +1,15 @@
 import styled, { css } from "styled-components";
 
+const dangerStyle = css`
+  background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
+  color: ${({ theme }) => theme.colors.filterBtnColorSel};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.filterBtnColorSelHover};
+    opacity: 1;
+  }
+`;
+
 export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 1.375rem;
   color: ${({ theme }) => theme.colors.btnColor};
@@ -24,14 +34,7 @@ export const FilterButtonStyled = styled(ButtonStyled)`
     $selected &&
     css`
       box-shadow: none;
-      background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
-      border: ${({ theme }) => theme.colors.filterBtnBgColorSel};
-      color: ${({ theme }) => theme.colors.filterBtnColorSel};
-
-      &:hover {
-        background-color: ${({ theme }) => theme.colors.filterBtnColorSelHover};
-        opacity: 1;
-      }
+      ${dangerStyle}
     `}
 `;
 
@@ -53,14 +56,8 @@ export const BorderButtonStyled = styled(ButtonStyled)`
 `;
 
 export const DangerButtonStyled = styled(BorderButtonStyled)`
-  background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
-  border: ${({ theme }) => theme.colors.filterBtnBgColorSel};
-  color: ${({ theme }) => theme.colors.filterBtnColorSel};
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.filterBtnColorSelHover};
-    opacity: 1;
-  }
+  border-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
+  ${dangerStyle}
 `;
 
 export const RemoveButtonStyled = styled(BorderButtonStyled)`
