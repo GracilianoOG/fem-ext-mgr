@@ -1,4 +1,4 @@
-interface ITheme {
+interface Theme {
   colors: {
     bodyColor: string;
     bodyGrad: string;
@@ -32,7 +32,7 @@ interface ITheme {
   boxShadow: string;
 }
 
-const lightTheme: ITheme = {
+const lightTheme: Theme = {
   colors: {
     bodyColor: "var(--neutral-200)",
     bodyGrad: "var(--light-gradient)",
@@ -66,7 +66,7 @@ const lightTheme: ITheme = {
   boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)",
 };
 
-const darkTheme: ITheme = {
+const darkTheme: Theme = {
   colors: {
     bodyColor: "var(--neutral-800)",
     bodyGrad: "var(--dark-gradient)",
@@ -101,4 +101,4 @@ const darkTheme: ITheme = {
 };
 
 export { lightTheme, darkTheme };
-export type { ITheme };
+export type { Theme as ITheme };
