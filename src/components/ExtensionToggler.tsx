@@ -12,13 +12,9 @@ const ExtensionToggler = ({ name, isActive, extId }: ExtensionTogglerProps) => {
 
   const handleClick = () =>
     setExtensions((prevExtensions) =>
-      prevExtensions.map((ext) => {
-        if (ext.id === extId) {
-          return { ...ext, isActive: !isActive };
-        } else {
-          return ext;
-        }
-      }),
+      prevExtensions.map((ext) =>
+        ext.id === extId ? { ...ext, isActive: !isActive } : ext,
+      ),
     );
 
   return (
