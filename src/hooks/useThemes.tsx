@@ -4,9 +4,9 @@ type ThemeType = "light" | "dark";
 
 export const useThemes = (): [ThemeType, () => void] => {
   const [theme, setTheme] = useState<ThemeType>(() => {
-    const localTheme = localStorage.getItem("theme");
-    return localTheme === "light" || localTheme === "dark"
-      ? localTheme
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === "light" || storedTheme === "dark"
+      ? storedTheme
       : "light";
   });
 
