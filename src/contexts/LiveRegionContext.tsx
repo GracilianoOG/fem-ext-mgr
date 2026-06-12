@@ -1,12 +1,12 @@
 import { createContext } from "react";
 
-interface ILiveRegionContext {
+interface LiveRegionContextValues {
   updateLiveRegion: (message: string) => void;
 }
 
-const defaultContextValue: ILiveRegionContext = {
+const defaultContextValue: LiveRegionContextValues = {
   updateLiveRegion: () => {},
 };
 
 export const LiveRegionContext =
-  createContext<ILiveRegionContext>(defaultContextValue);
+  createContext<LiveRegionContextValues>(defaultContextValue);
