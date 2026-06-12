@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 
 type ThemeType = "light" | "dark";
 
-export const useThemes = (): [ThemeType, () => void] => {
+export const useThemes = () => {
   const [theme, setTheme] = useState<ThemeType>(() => {
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme === "light" || storedTheme === "dark"
-      ? storedTheme
-      : "light";
+    const storedTheme = localStorage.getItem("theme") as ThemeType;
+
+    if (storedTheme) {
+      return storedTheme;
+    }
+
+    return "light";
   });
 
   const toggleTheme = () => {
