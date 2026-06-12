@@ -4,6 +4,10 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
   border-radius: 1.375rem;
   color: ${({ theme }) => theme.colors.btnColor};
   text-transform: capitalize;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    opacity 0.2s;
 `;
 
 export const FilterButtonStyled = styled(ButtonStyled)`
@@ -12,9 +16,6 @@ export const FilterButtonStyled = styled(ButtonStyled)`
   border: ${({ theme }) => theme.colors.filterBtnBgColor};
   font-size: 1.25rem;
   padding: 0.5rem 1.25rem;
-  transition:
-    background-color 0.2s,
-    opacity 0.2s;
   &:hover {
     opacity: 0.75;
   }
@@ -40,9 +41,6 @@ export const BorderButtonStyled = styled(ButtonStyled)`
   font-size: 0.938rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  transition:
-    background-color 0.2s,
-    border-color 0.2s;
 
   &:focus-visible {
     background-color: ${({ theme }) => theme.colors.removeBtnColorFocus};
