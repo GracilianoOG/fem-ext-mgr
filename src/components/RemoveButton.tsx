@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from "react";
-import { RemoveButtonStyled } from "./styles/Button.styled";
+import { BorderButtonStyled } from "./styles/Button.styled";
 
 interface RemoveButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   name: string;
@@ -7,9 +7,9 @@ interface RemoveButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const RemoveButton = ({ name, ...props }: RemoveButtonProps) => {
   return (
-    <RemoveButtonStyled {...props} aria-label={`Remove ${name}`}>
+    <BorderButtonStyled {...props} aria-label={`Remove ${name}`}>
       <span aria-hidden="true">Remove</span>
-    </RemoveButtonStyled>
+    </BorderButtonStyled>
   );
 };
 
