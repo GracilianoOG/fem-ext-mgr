@@ -4,7 +4,7 @@ export type Theme = "light" | "dark";
 
 interface ThemeContextValues {
   theme: Theme;
-  toggleTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  toggleTheme: () => void;
 }
 
 export const ThemeContext = createContext<ThemeContextValues | undefined>(
