@@ -50,9 +50,7 @@ export const BorderButtonStyled = styled(ButtonStyled)`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.removeBtnBgColorHover};
-    border-color: ${({ theme }) => theme.colors.removeBtnBorderColorHover};
-    color: ${({ theme }) => theme.colors.removeBtnColorHover};
+    opacity: 0.75;
   }
 `;
 
