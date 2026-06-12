@@ -54,9 +54,7 @@ export const ConfirmModal = ({
   onConfirm,
   onCancel,
 }: ConfirmModalProps) => {
-  if (!isVisible) {
-    return;
-  }
+  if (!isVisible) return null;
 
   return (
     <ConfirmModalStyled>
