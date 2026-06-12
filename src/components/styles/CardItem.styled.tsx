@@ -1,28 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
-
-const popIn = keyframes`
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-`;
-
-const popOut = keyframes`
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(0);
-  }
-`;
+import styled, { css } from "styled-components";
+import { popIn, popOut } from "../../styles/animations";
 
 export const CardItemStyled = styled.li<{ $isRemoved: boolean }>`
   animation: ${popIn} 0.35s forwards ease;

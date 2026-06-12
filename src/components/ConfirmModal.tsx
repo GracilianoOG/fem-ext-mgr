@@ -1,3 +1,4 @@
+import { popIn } from "../styles/animations";
 import { BorderButtonStyled, DangerButtonStyled } from "./styles/Button.styled";
 import styled from "styled-components";
 
@@ -24,6 +25,7 @@ const ConfirmModalStyled = styled.div`
   }
 
   & > div {
+    animation: ${popIn} 0.35s forwards ease;
     box-shadow: ${({ theme }) => theme.boxShadow};
     background-color: ${({ theme }) => theme.colors.cardBgColor};
     border-radius: 1.25rem;
