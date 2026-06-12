@@ -7,7 +7,7 @@ import { darkTheme, lightTheme } from "./utils/themes";
 import Footer from "./components/Footer";
 
 function App() {
-  const [theme, toggleTheme] = useThemes();
+  const { theme, toggleTheme } = useThemes();
 
   return (
     <>
