@@ -1,6 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const popIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 export const CardItemStyled = styled.li`
+  animation: ${popIn} 0.35s forwards ease;
   box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.cardBgColor};
   border-radius: 1.25rem;
@@ -9,6 +22,7 @@ export const CardItemStyled = styled.li`
   justify-content: space-between;
   list-style: none;
   min-height: 12.5rem;
+  opacity: 0;
   padding: 1.25rem;
   width: 100%;
 `;
