@@ -54,3 +54,14 @@ export const BorderButtonStyled = styled(ButtonStyled)`
     color: ${({ theme }) => theme.colors.removeBtnColorHover};
   }
 `;
+
+export const DangerButtonStyled = styled(BorderButtonStyled)`
+  background-color: ${({ theme }) => theme.colors.filterBtnBgColorSel};
+  border: ${({ theme }) => theme.colors.filterBtnBgColorSel};
+  color: ${({ theme }) => theme.colors.filterBtnColorSel};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.filterBtnColorSelHover};
+    opacity: 1;
+  }
+`;
