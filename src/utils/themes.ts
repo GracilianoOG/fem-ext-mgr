@@ -101,4 +101,4 @@ const darkTheme: ThemeValues = {
 };
 
 export { lightTheme, darkTheme };
-export type { ThemeValues as ITheme };
+export type { ThemeValues };
