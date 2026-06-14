@@ -3,6 +3,7 @@ import { ExtensionContext } from "../contexts/ExtensionContext";
 import data from "../data/data.json";
 import type { CardItemProps } from "../interfaces/CardItemProps";
 import type { Extension } from "../interfaces/Extension";
+import { generateId } from "../utils/extensions";
 
 const ExtensionProvider = ({ children }: PropsWithChildren) => {
   const [extensions, setExtensions] = useState<CardItemProps[]>(() => {
@@ -14,7 +15,7 @@ const ExtensionProvider = ({ children }: PropsWithChildren) => {
 
     return data.map((ext: Extension) => ({
       ...ext,
-      id: self.crypto.randomUUID(),
+      id: generateId(),
     }));
   });
 
