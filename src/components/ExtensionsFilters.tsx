@@ -4,13 +4,11 @@ import { TitleStyled } from "./styles/Title.styled";
 import { FilterTypes } from "../enums/FilterTypes";
 import FilterButton from "./FilterButton";
 import { VisuallyHidden } from "./styles/VisuallyHidden.styled";
+import { useFilter } from "../hooks/useFilter";
 
-interface ExtensionsFiltersProps {
-  filter: string;
-  setFilter: React.Dispatch<React.SetStateAction<string>>;
-}
+const ExtensionsFilters = () => {
+  const { filter, setFilter } = useFilter();
 
-const ExtensionsFilters = ({ filter, setFilter }: ExtensionsFiltersProps) => {
   return (
     <ExtensionsFiltersStyled>
       <TitleStyled>
