@@ -12,6 +12,10 @@ const slideLeft = keyframes`
 
 const slideRight = keyframes`
   0% {
+    transform: scale(0.75);
+  }
+
+  10% {
     transform: translateX(0) scale(0.85);
   }
 
