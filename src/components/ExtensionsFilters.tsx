@@ -4,11 +4,8 @@ import { TitleStyled } from "./styles/Title.styled";
 import { FilterTypes } from "../enums/FilterTypes";
 import FilterButton from "./FilterButton";
 import { VisuallyHidden } from "./styles/VisuallyHidden.styled";
-import { useFilter } from "../hooks/useFilter";
 
 const ExtensionsFilters = () => {
-  const { filter, setFilter } = useFilter();
-
   return (
     <ExtensionsFiltersStyled>
       <TitleStyled>
@@ -16,25 +13,13 @@ const ExtensionsFilters = () => {
       </TitleStyled>
       <FiltersContainerStyled>
         <li>
-          <FilterButton
-            selected={filter}
-            setSelected={setFilter}
-            btnFilter={FilterTypes.ALL}
-          />
+          <FilterButton btnFilter={FilterTypes.ALL} />
         </li>
         <li>
-          <FilterButton
-            selected={filter}
-            setSelected={setFilter}
-            btnFilter={FilterTypes.ACTIVE}
-          />
+          <FilterButton btnFilter={FilterTypes.ACTIVE} />
         </li>
         <li>
-          <FilterButton
-            selected={filter}
-            setSelected={setFilter}
-            btnFilter={FilterTypes.INACTIVE}
-          />
+          <FilterButton btnFilter={FilterTypes.INACTIVE} />
         </li>
       </FiltersContainerStyled>
     </ExtensionsFiltersStyled>
