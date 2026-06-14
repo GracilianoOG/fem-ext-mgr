@@ -1,12 +1,8 @@
-import { useRef } from "react";
+import { useRef, type PropsWithChildren } from "react";
 import { VisuallyHidden } from "../components/styles/VisuallyHidden.styled";
 import { LiveRegionContext } from "../contexts/LiveRegionContext";
 
-interface LiveRegionProviderProps {
-  children: React.ReactNode;
-}
-
-const LiveRegionProvider = ({ children }: LiveRegionProviderProps) => {
+const LiveRegionProvider = ({ children }: PropsWithChildren) => {
   const liveRegionRef = useRef<HTMLDivElement | null>(null);
 
   const updateLiveRegion = (message: string) => {
