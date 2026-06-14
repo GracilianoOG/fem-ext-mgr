@@ -30,7 +30,7 @@ const ConfirmModalStyled = styled.div`
     background-color: ${({ theme }) => theme.colors.cardBgColor};
     border-radius: 1.25rem;
     padding: 1.25rem;
-    width: min(100%, 20rem);
+    width: min(100%, 22.5rem);
   }
 `;
 
