@@ -13,3 +13,5 @@ export const filterExtensions = (
     return extensions.filter((ext) => !ext.isActive);
   }
 };
+
+export const generateId = () => self.crypto.randomUUID();
