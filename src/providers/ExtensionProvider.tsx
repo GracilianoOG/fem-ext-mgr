@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ExtensionContext } from "../contexts/ExtensionContext";
 import data from "../data/data.json";
 import type { CardItemProps } from "../interfaces/CardItemProps";
+import type { Extension } from "../interfaces/Extension";
 
 interface ExtensionProviderProps {
   children: React.ReactNode;
@@ -15,7 +16,10 @@ const ExtensionProvider = ({ children }: ExtensionProviderProps) => {
       return JSON.parse(storedExtensions);
     }
 
-    return data.map((ext) => ({ ...ext, id: self.crypto.randomUUID() }));
+    return data.map((ext: Extension) => ({
+      ...ext,
+      id: self.crypto.randomUUID(),
+    }));
   });
 
   useEffect(() => {
