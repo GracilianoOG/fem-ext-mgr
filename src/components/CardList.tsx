@@ -3,9 +3,11 @@ import { CardListStyled } from "./styles/CardList.styled";
 import { useExtensions } from "../hooks/useExtensions";
 import { EmptyMessageStyled } from "./styles/EmptyMessage.styled";
 import { filterExtensions } from "../utils/extensions";
+import { useFilter } from "../hooks/useFilter";
 
-const CardList = ({ filter }: { filter: string }) => {
+const CardList = () => {
   const { extensions } = useExtensions();
+  const { filter } = useFilter();
   const visibleExtensions = filterExtensions(filter, extensions);
 
   return visibleExtensions.length ? (
