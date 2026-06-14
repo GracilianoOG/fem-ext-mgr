@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type PropsWithChildren } from "react";
 import { ExtensionContext } from "../contexts/ExtensionContext";
 import data from "../data/data.json";
 import type { CardItemProps } from "../interfaces/CardItemProps";
 import type { Extension } from "../interfaces/Extension";
 
-interface ExtensionProviderProps {
-  children: React.ReactNode;
-}
-
-const ExtensionProvider = ({ children }: ExtensionProviderProps) => {
+const ExtensionProvider = ({ children }: PropsWithChildren) => {
   const [extensions, setExtensions] = useState<CardItemProps[]>(() => {
     const storedExtensions = localStorage.getItem("extensions");
 
