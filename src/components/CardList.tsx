@@ -1,29 +1,16 @@
 import CardItem from "./CardItem";
 import { CardListStyled } from "./styles/CardList.styled";
-import { FilterTypes } from "../enums/FilterTypes";
 import { useExtensions } from "../hooks/useExtensions";
 import { EmptyMessageStyled } from "./styles/EmptyMessage.styled";
-import { useCallback, useMemo } from "react";
+import { useMemo } from "react";
+import { filterExtensions } from "../utils/extensions";
 
 const CardList = ({ filter }: { filter: string }) => {
   const { extensions } = useExtensions();
 
-  const getExtensions = useCallback(
-    (filter: string) => {
-      if (filter === FilterTypes.ALL) {
-        return extensions;
-      } else if (filter === FilterTypes.ACTIVE) {
-        return extensions.filter((ext) => ext.isActive);
-      } else {
-        return extensions.filter((ext) => !ext.isActive);
-      }
-    },
-    [extensions],
-  );
-
   const visibleExtensions = useMemo(
-    () => getExtensions(filter),
-    [getExtensions, filter],
+    () => filterExtensions(filter, extensions),
+    [filter, extensions],
   );
 
   return visibleExtensions.length ? (
