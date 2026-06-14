@@ -1,23 +1,19 @@
+import { useFilter } from "../hooks/useFilter";
 import { FilterButtonStyled } from "./styles/Button.styled";
 
 interface FilterButtonProps {
-  selected: string;
   btnFilter: string;
-  setSelected: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const FilterButton = ({
-  selected,
-  btnFilter,
-  setSelected,
-}: FilterButtonProps) => {
-  const handleClick = () => setSelected(btnFilter);
+const FilterButton = ({ btnFilter }: FilterButtonProps) => {
+  const { filter, setFilter } = useFilter();
+  const handleClick = () => setFilter(btnFilter);
 
   return (
     <FilterButtonStyled
-      $selected={selected === btnFilter}
+      $selected={filter === btnFilter}
       onClick={handleClick}
-      aria-pressed={selected === btnFilter}
+      aria-pressed={filter === btnFilter}
     >
       {btnFilter}
     </FilterButtonStyled>
