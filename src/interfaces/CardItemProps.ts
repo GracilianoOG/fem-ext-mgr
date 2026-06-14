@@ -1,7 +1,5 @@
-export interface CardItemProps {
+import type { Extension } from "./Extension";
+
+export interface CardItemProps extends Extension {
   id: `${string}-${string}-${string}-${string}-${string}`;
-  logo: string;
-  name: string;
-  description: string;
-  isActive: boolean;
 }
