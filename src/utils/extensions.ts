@@ -1,6 +1,8 @@
 import { FilterTypes } from "../enums/FilterTypes";
 import type { CardItemProps } from "../interfaces/CardItemProps";
 
+export type FilterOptions = "all" | "active" | "inactive";
+
 export const filterExtensions = (
   filter: string,
   extensions: CardItemProps[],
