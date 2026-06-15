@@ -4,7 +4,7 @@ import type { CardItemProps } from "../interfaces/CardItemProps";
 export type FilterOptions = "all" | "active" | "inactive";
 
 export const filterExtensions = (
-  filter: string,
+  filter: FilterOptions,
   extensions: CardItemProps[],
 ) => {
   if (filter === FilterTypes.ALL) {
