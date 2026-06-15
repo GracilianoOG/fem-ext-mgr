@@ -3,7 +3,7 @@ import Main from "./components/Main";
 import { GlobalStyles } from "./components/styles/GlobalStyles.styled";
 import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
     <>
       <GlobalStyles />
@@ -12,6 +12,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
