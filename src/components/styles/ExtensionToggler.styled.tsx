@@ -1,28 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
-
-const slideLeft = keyframes`
-  0% {
-    transform: translateX(var(--knob-active)) scale(1);
-  }  
-
-  100% {
-    transform: translateX(0) scale(0.85);
-  }
-`;
-
-const slideRight = keyframes`
-  0% {
-    transform: scale(0.75);
-  }
-
-  10% {
-    transform: translateX(0) scale(0.85);
-  }
-
-  100% {
-    transform: translateX(var(--knob-active)) scale(1);
-  }
-`;
+import styled, { css } from "styled-components";
+import { slideLeft, slideRight } from "../../styles/animations";
 
 export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
   --toggle-width: 2.25rem;
@@ -55,7 +32,7 @@ export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
     `}
 
   &::before {
-    animation: ${slideLeft} 0.2s forwards;
+    animation: ${slideLeft("var(--knob-active)")} 0.2s forwards;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.colors.togglerKnobBgColor};
     content: "";
@@ -69,7 +46,7 @@ export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
     ${({ $isActive }) =>
       $isActive &&
       css`
-        animation: ${slideRight} 0.2s forwards;
+        animation: ${slideRight("var(--knob-active)")} 0.2s forwards;
       `}
   }
 `;
