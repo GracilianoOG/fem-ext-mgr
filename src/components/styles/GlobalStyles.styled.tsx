@@ -1,19 +1,10 @@
-import { createGlobalStyle, keyframes } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import nsRegular from "../../assets/fonts/static/NotoSans-Regular.ttf";
 import nsMedium from "../../assets/fonts/static/NotoSans-Medium.ttf";
 import nsBold from "../../assets/fonts/static/NotoSans-Bold.ttf";
 import nsVariable from "../../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf";
 import { mediaQueries } from "../../utils/mediaQueries";
-
-const focusAim = keyframes`
-  0% {
-    outline-offset: 0.375rem;
-  }
-
-  100% {
-    outline-offset: 0.125rem;
-  }
-`;
+import { focusAim } from "../../styles/animations";
 
 export const GlobalStyles = createGlobalStyle`
   *,

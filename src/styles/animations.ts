@@ -1,5 +1,15 @@
 import { keyframes } from "styled-components";
 
+export const focusAim = keyframes`
+  0% {
+    outline-offset: 0.375rem;
+  }
+
+  100% {
+    outline-offset: 0.125rem;
+  }
+`;
+
 export const popIn = keyframes`
   0% {
     opacity: 0;
