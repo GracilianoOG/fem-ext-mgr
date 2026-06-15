@@ -1,8 +1,9 @@
 import { useFilter } from "../hooks/useFilter";
+import type { FilterOptions } from "../utils/extensions";
 import { FilterButtonStyled } from "./styles/Button.styled";
 
 interface FilterButtonProps {
-  btnFilter: string;
+  btnFilter: FilterOptions;
 }
 
 const FilterButton = ({ btnFilter }: FilterButtonProps) => {
