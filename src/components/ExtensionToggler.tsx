@@ -18,7 +18,7 @@ const ExtensionToggler = ({ name, isActive, extId }: ExtensionTogglerProps) => {
 
     setExtensions((prevExtensions) =>
       prevExtensions.map((ext) =>
-        ext.id === extId ? { ...ext, isActive: !isActive } : ext,
+        ext.id !== extId ? ext : { ...ext, isActive: !isActive },
       ),
     );
   };
