@@ -23,12 +23,14 @@ const ExtensionToggler = ({ name, isActive, extId }: ExtensionTogglerProps) => {
     );
   };
 
+  const handleClick = () => {
+    setIsToggled(!isToggled);
+    clicked.current = true;
+  };
+
   return (
     <ExtensionTogglerStyled
-      onClick={() => {
-        setIsToggled(!isToggled);
-        clicked.current = true;
-      }}
+      onClick={handleClick}
       onAnimationEnd={handleAnimationEnd}
       $isActive={isToggled}
       role="switch"
