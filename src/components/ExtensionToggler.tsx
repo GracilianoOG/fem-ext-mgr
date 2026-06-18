@@ -18,11 +18,12 @@ const ExtensionToggler = ({ name, isActive, extId }: ExtensionTogglerProps) => {
   const handleAnimationEnd = () => {
     if (!clicked.current) return;
 
-    updateLiveRegion(`Turned ${name} ${!isActive ? "on" : "off"}`);
+    const nextToggleState = !isActive;
 
+    updateLiveRegion(`Turned ${name} ${nextToggleState ? "on" : "off"}`);
     setExtensions((prevExtensions) =>
       prevExtensions.map((ext) =>
-        ext.id !== extId ? ext : { ...ext, isActive: !isActive },
+        ext.id !== extId ? ext : { ...ext, isActive: nextToggleState },
       ),
     );
   };
