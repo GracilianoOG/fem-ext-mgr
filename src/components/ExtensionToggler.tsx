@@ -1,6 +1,7 @@
 import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
 import { useExtensions } from "../hooks/useExtensions";
 import { useRef, useState } from "react";
+import { useLiveRegion } from "../hooks/useLiveRegion";
 
 interface ExtensionTogglerProps {
   name: string;
@@ -10,11 +11,14 @@ interface ExtensionTogglerProps {
 
 const ExtensionToggler = ({ name, isActive, extId }: ExtensionTogglerProps) => {
   const { setExtensions } = useExtensions();
+  const { updateLiveRegion } = useLiveRegion();
   const [isToggled, setIsToggled] = useState(isActive);
   const clicked = useRef(false);
 
   const handleAnimationEnd = () => {
     if (!clicked.current) return;
+
+    updateLiveRegion(`Turned ${name} ${!isActive ? "on" : "off"}`);
 
     setExtensions((prevExtensions) =>
       prevExtensions.map((ext) =>
