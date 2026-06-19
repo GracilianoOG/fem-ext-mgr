@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ButtonStyled } from "../styles/Button.styled";
+import { dangerStyle } from "@/styles/buttonStyles";
 
 export const FilterButtonStyled = styled(ButtonStyled)`
   box-shadow: ${({ theme }) => theme.boxShadow};
