@@ -1,7 +1,7 @@
-import { ExtensionTogglerStyled } from "./styles/ExtensionToggler.styled";
-import { useExtensions } from "../hooks/useExtensions";
+import { ExtensionTogglerStyled } from "./ExtensionToggler.styled";
+import { useExtensions } from "@/hooks/useExtensions";
 import { useRef, useState } from "react";
-import { useLiveRegion } from "../hooks/useLiveRegion";
+import { useLiveRegion } from "@/hooks/useLiveRegion";
 
 interface ExtensionTogglerProps {
   name: string;

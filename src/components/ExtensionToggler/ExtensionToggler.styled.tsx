@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { slideLeft, slideRight } from "../../styles/animations";
+import { slideLeft, slideRight } from "@/styles/animations";
 
 export const ExtensionTogglerStyled = styled.button<{ $isActive: boolean }>`
   --toggle-width: 2.25rem;
