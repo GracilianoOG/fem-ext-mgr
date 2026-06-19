@@ -1,6 +1,6 @@
 import { useFilter } from "@/hooks/useFilter";
 import type { FilterOptions } from "@/utils/extensions";
-import { FilterButtonStyled } from "../styles/Button.styled";
+import { FilterButtonStyled } from "./FilterButton.styled";
 
 interface FilterButtonProps {
   btnFilter: FilterOptions;
