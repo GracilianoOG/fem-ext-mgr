@@ -1,10 +1,10 @@
-import ExtensionsFilters from "./ExtensionsFilters";
-import CardList from "./CardList";
-import ExtensionProvider from "../providers/ExtensionProvider";
-import { MainStyled } from "./styles/Main.styled";
-import LiveRegionProvider from "../providers/LiveRegionProvider";
-import { VisuallyHidden } from "./styles/VisuallyHidden.styled";
-import FilterProvider from "../providers/FilterProvider";
+import ExtensionsFilters from "../ExtensionsFilters";
+import CardList from "../CardList";
+import ExtensionProvider from "@/providers/ExtensionProvider";
+import { MainStyled } from "./Main.styled";
+import LiveRegionProvider from "@/providers/LiveRegionProvider";
+import { VisuallyHidden } from "../styles/VisuallyHidden.styled";
+import FilterProvider from "@/providers/FilterProvider";
 
 const Main = () => {
   return (
