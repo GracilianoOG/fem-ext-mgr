@@ -1,6 +1,6 @@
-import { HeaderStyled } from "./styles/Header.styled";
-import Logo from "./Logo";
-import ThemeToggler from "./ThemeToggler";
+import { HeaderStyled } from "./Header.styled";
+import Logo from "../Logo";
+import ThemeToggler from "../ThemeToggler";
 
 const Header = () => {
   return (
