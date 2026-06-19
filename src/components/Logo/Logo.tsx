@@ -1,6 +1,6 @@
 import logo from "/logos/logo.svg";
 import logoDark from "/logos/logo-dark.svg";
-import { useThemes } from "../hooks/useThemes";
+import { useThemes } from "@/hooks/useThemes";
 
 const Logo = () => {
   const { theme } = useThemes();
