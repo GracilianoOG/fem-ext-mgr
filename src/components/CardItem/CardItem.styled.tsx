@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { popIn, popOut } from "../../styles/animations";
+import { popIn, popOut } from "@/styles/animations";
 
 export const CardItemStyled = styled.li<{ $isRemoved: boolean }>`
   animation: ${popIn} 0.35s forwards ease;
