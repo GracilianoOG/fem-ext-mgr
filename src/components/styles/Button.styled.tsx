@@ -20,24 +20,6 @@ export const ButtonStyled = styled.button<{ $selected?: boolean }>`
     opacity 0.2s;
 `;
 
-export const FilterButtonStyled = styled(ButtonStyled)`
-  box-shadow: ${({ theme }) => theme.boxShadow};
-  background-color: ${({ theme }) => theme.colors.filterBtnBgColor};
-  border: ${({ theme }) => theme.colors.filterBtnBgColor};
-  font-size: 1.25rem;
-  padding: 0.5rem 1.25rem;
-  &:hover {
-    opacity: 0.75;
-  }
-
-  ${({ $selected }) =>
-    $selected &&
-    css`
-      box-shadow: none;
-      ${dangerStyle}
-    `}
-`;
-
 export const BorderButtonStyled = styled(ButtonStyled)`
   background-color: transparent;
   border: 0.063rem solid ${({ theme }) => theme.colors.removeBtnBorderColor};
