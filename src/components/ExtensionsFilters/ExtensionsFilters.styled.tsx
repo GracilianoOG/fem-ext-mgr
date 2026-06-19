@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQueries } from "../../utils/mediaQueries";
+import { mediaQueries } from "@/utils/mediaQueries";
 
 export const ExtensionsFiltersStyled = styled.section`
   align-items: center;
