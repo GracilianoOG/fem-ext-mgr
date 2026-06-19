@@ -1,16 +1,16 @@
 import { memo, useState } from "react";
-import type { CardItemProps } from "../interfaces/CardItemProps";
-import ExtensionToggler from "./ExtensionToggler";
-import RemoveButton from "./RemoveButton";
+import type { CardItemProps } from "@/interfaces/CardItemProps";
+import ExtensionToggler from "../ExtensionToggler";
+import RemoveButton from "../RemoveButton";
 import {
   CardItemInfoStyled,
   CardItemPanelStyled,
   CardItemStyled,
   CardItemTitleStyled,
-} from "./styles/CardItem.styled";
-import { useExtensions } from "../hooks/useExtensions";
-import { useLiveRegion } from "../hooks/useLiveRegion";
-import { ConfirmModal } from "./ConfirmModal";
+} from "./CardItem.styled";
+import { useExtensions } from "@/hooks/useExtensions";
+import { useLiveRegion } from "@/hooks/useLiveRegion";
+import { ConfirmModal } from "../ConfirmModal";
 
 const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   const { setExtensions } = useExtensions();
