@@ -7,6 +7,13 @@ export const TitleStyled = styled.h1`
   text-align: center;
 `;
 
+export const FiltersContainerStyled = styled.ul`
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  list-style: none;
+`;
+
 export const ExtensionsFiltersStyled = styled.section`
   align-items: center;
   display: flex;

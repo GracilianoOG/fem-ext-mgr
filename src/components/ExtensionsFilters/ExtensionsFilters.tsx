@@ -1,8 +1,8 @@
 import {
   ExtensionsFiltersStyled,
+  FiltersContainerStyled,
   TitleStyled,
 } from "./ExtensionsFilters.styled";
-import { FiltersContainerStyled } from "../styles/FiltersContainer.styled";
 import { FilterTypes } from "@/enums/FilterTypes";
 import FilterButton from "../FilterButton";
 import { VisuallyHidden } from "../styles/VisuallyHidden.styled";
