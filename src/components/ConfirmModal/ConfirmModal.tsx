@@ -15,7 +15,7 @@ interface ConfirmModalProps {
   onCancel: () => void;
 }
 
-export const ConfirmModal = ({
+const ConfirmModal = ({
   isVisible,
   title,
   description,
@@ -37,3 +37,5 @@ export const ConfirmModal = ({
     </ConfirmModalStyled>
   );
 };
+
+export default ConfirmModal;
