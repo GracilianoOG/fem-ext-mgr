@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from "react";
-import { RemoveButtonStyled } from "./styles/Button.styled";
+import { RemoveButtonStyled } from "../styles/Button.styled";
 
 interface RemoveButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   name: string;
