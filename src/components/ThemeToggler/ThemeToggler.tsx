@@ -1,7 +1,7 @@
-import moonIcon from "../assets/images/icons/icon-moon.svg";
-import sunIcon from "../assets/images/icons/icon-sun.svg";
-import { useThemes } from "../hooks/useThemes";
-import { ThemeTogglerStyled } from "./styles/ThemeToggler.styled";
+import moonIcon from "@/assets/images/icons/icon-moon.svg";
+import sunIcon from "@/assets/images/icons/icon-sun.svg";
+import { useThemes } from "@/hooks/useThemes";
+import { ThemeTogglerStyled } from "./ThemeToggler.styled";
 
 const ThemeToggler = () => {
   const { theme, toggleTheme } = useThemes();
