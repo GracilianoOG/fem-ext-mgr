@@ -1,8 +1,11 @@
-import { BorderButtonStyled, DangerButtonStyled } from "./styles/Button.styled";
+import {
+  BorderButtonStyled,
+  DangerButtonStyled,
+} from "../styles/Button.styled";
 import {
   ConfirmModalButtonsStyled,
   ConfirmModalStyled,
-} from "./styles/ConfirmModal.styled";
+} from "./ConfirmModal.styled";
 
 interface ConfirmModalProps {
   isVisible: boolean;

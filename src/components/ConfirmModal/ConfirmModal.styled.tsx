@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { popIn } from "../../styles/animations";
+import { popIn } from "@/styles/animations";
 
 export const ConfirmModalStyled = styled.div`
   align-items: center;
