@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import nsRegular from "../../assets/fonts/static/NotoSans-Regular.ttf";
-import nsMedium from "../../assets/fonts/static/NotoSans-Medium.ttf";
-import nsBold from "../../assets/fonts/static/NotoSans-Bold.ttf";
-import nsVariable from "../../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf";
-import { mediaQueries } from "../../utils/mediaQueries";
-import { focusAim } from "../../styles/animations";
+import nsRegular from "@/assets/fonts/static/NotoSans-Regular.ttf";
+import nsMedium from "@/assets/fonts/static/NotoSans-Medium.ttf";
+import nsBold from "@/assets/fonts/static/NotoSans-Bold.ttf";
+import nsVariable from "@/assets/fonts/NotoSans-VariableFont_wdth,wght.ttf";
+import { mediaQueries } from "@/utils/mediaQueries";
+import { focusAim } from "@/styles/animations";
 
 export const GlobalStyles = createGlobalStyle`
   *,
