@@ -1,7 +1,6 @@
 import CardItem from "../CardItem";
-import { CardListStyled } from "./CardList.styled";
+import { CardListStyled, EmptyMessageStyled } from "./CardList.styled";
 import { useExtensions } from "@/hooks/useExtensions";
-import { EmptyMessageStyled } from "../styles/EmptyMessage.styled";
 import { filterExtensions } from "@/utils/extensions";
 import { useFilter } from "@/hooks/useFilter";
 
