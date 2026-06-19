@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { mediaQueries } from "@/utils/mediaQueries";
 
+export const TitleStyled = styled.h1`
+  color: ${({ theme }) => theme.colors.titleColor};
+  font-size: 2rem;
+  text-align: center;
+`;
+
 export const ExtensionsFiltersStyled = styled.section`
   align-items: center;
   display: flex;
