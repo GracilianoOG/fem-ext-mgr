@@ -10,7 +10,7 @@ import {
 } from "./CardItem.styled";
 import { useExtensions } from "@/hooks/useExtensions";
 import { useLiveRegion } from "@/hooks/useLiveRegion";
-import { ConfirmModal } from "../ConfirmModal";
+import ConfirmModal from "../ConfirmModal";
 
 const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
   const { setExtensions } = useExtensions();
