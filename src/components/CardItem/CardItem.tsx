@@ -58,6 +58,7 @@ const CardItem = ({ id, logo, name, description, isActive }: CardItemProps) => {
         isVisible={isModal}
         title="Delete Extension"
         description={`Do you want to delete the ${name} extension?`}
+        confirmText="Remove"
         onConfirm={handleConfirm}
         onCancel={() => setIsModal(false)}
       />
