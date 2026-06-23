@@ -1,4 +1,4 @@
-import { useEffect, useId } from "react";
+import { useEffect, useId, useRef } from "react";
 import {
   BorderButtonStyled,
   DangerButtonStyled,
@@ -24,6 +24,27 @@ const ConfirmModal = ({
   onCancel,
 }: ConfirmModalProps) => {
   const textId = useId();
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const confirmBtnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const handleKeydown = (e: KeyboardEvent) => {
+      if (e.key === "Tab") {
+        if (document.activeElement === closeBtnRef.current) {
+          e.preventDefault();
+          confirmBtnRef.current?.focus();
+        } else if (document.activeElement === confirmBtnRef.current) {
+          e.preventDefault();
+          closeBtnRef.current?.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isVisible ? "hidden" : "";
@@ -44,10 +65,12 @@ const ConfirmModal = ({
           <p>{description}</p>
         </span>
         <ConfirmModalButtonsStyled>
-          <BorderButtonStyled onClick={onCancel} autoFocus>
+          <BorderButtonStyled ref={closeBtnRef} onClick={onCancel} autoFocus>
             Cancel
           </BorderButtonStyled>
-          <DangerButtonStyled onClick={onConfirm}>Remove</DangerButtonStyled>
+          <DangerButtonStyled ref={confirmBtnRef} onClick={onConfirm}>
+            Remove
+          </DangerButtonStyled>
         </ConfirmModalButtonsStyled>
       </div>
     </ConfirmModalStyled>
