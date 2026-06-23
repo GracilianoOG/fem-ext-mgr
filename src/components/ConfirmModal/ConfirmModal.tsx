@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useEffect, useId } from "react";
 import {
   BorderButtonStyled,
   DangerButtonStyled,
@@ -24,6 +24,10 @@ const ConfirmModal = ({
   onCancel,
 }: ConfirmModalProps) => {
   const textId = useId();
+
+  useEffect(() => {
+    document.body.style.overflow = isVisible ? "hidden" : "";
+  }, [isVisible]);
 
   if (!isVisible) return null;
 
