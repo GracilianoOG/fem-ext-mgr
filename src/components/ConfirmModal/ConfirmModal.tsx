@@ -13,6 +13,7 @@ interface ConfirmModalProps {
   title: string;
   description: string;
   confirmText?: string;
+  cancelText?: string;
   onConfirm: () => void;
   onCancel: () => void;
 }
@@ -22,6 +23,7 @@ const ConfirmModal = ({
   title,
   description,
   confirmText,
+  cancelText,
   onConfirm,
   onCancel,
 }: ConfirmModalProps) => {
@@ -68,7 +70,7 @@ const ConfirmModal = ({
         </span>
         <ConfirmModalButtonsStyled>
           <BorderButtonStyled ref={closeBtnRef} onClick={onCancel} autoFocus>
-            Cancel
+            {cancelText ?? "Cancel"}
           </BorderButtonStyled>
           <DangerButtonStyled ref={confirmBtnRef} onClick={onConfirm}>
             {confirmText ?? "Confirm"}
