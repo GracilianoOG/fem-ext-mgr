@@ -34,8 +34,10 @@ const ConfirmModal = ({
       aria-labelledby={textId}
     >
       <div>
-        <h2 id={textId}>{title}</h2>
-        <p>{description}</p>
+        <span id={textId}>
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </span>
         <ConfirmModalButtonsStyled>
           <BorderButtonStyled onClick={onCancel}>Cancel</BorderButtonStyled>
           <DangerButtonStyled onClick={onConfirm}>Remove</DangerButtonStyled>
