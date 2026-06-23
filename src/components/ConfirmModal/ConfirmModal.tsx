@@ -12,6 +12,7 @@ interface ConfirmModalProps {
   isVisible: boolean;
   title: string;
   description: string;
+  confirmText?: string;
   onConfirm: () => void;
   onCancel: () => void;
 }
@@ -20,6 +21,7 @@ const ConfirmModal = ({
   isVisible,
   title,
   description,
+  confirmText,
   onConfirm,
   onCancel,
 }: ConfirmModalProps) => {
@@ -69,7 +71,7 @@ const ConfirmModal = ({
             Cancel
           </BorderButtonStyled>
           <DangerButtonStyled ref={confirmBtnRef} onClick={onConfirm}>
-            Remove
+            {confirmText ?? "Confirm"}
           </DangerButtonStyled>
         </ConfirmModalButtonsStyled>
       </div>
