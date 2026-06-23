@@ -39,7 +39,9 @@ const ConfirmModal = ({
           <p>{description}</p>
         </span>
         <ConfirmModalButtonsStyled>
-          <BorderButtonStyled onClick={onCancel}>Cancel</BorderButtonStyled>
+          <BorderButtonStyled onClick={onCancel} autoFocus>
+            Cancel
+          </BorderButtonStyled>
           <DangerButtonStyled onClick={onConfirm}>Remove</DangerButtonStyled>
         </ConfirmModalButtonsStyled>
       </div>
