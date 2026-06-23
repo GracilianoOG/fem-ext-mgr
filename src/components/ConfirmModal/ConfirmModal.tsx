@@ -25,7 +25,7 @@ const ConfirmModal = ({
   if (!isVisible) return null;
 
   return (
-    <ConfirmModalStyled aria-modal="true">
+    <ConfirmModalStyled aria-modal="true" role="dialog">
       <div>
         <h2>{title}</h2>
         <p>{description}</p>
