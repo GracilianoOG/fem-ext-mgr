@@ -42,13 +42,16 @@ const ConfirmModal = ({
           closeBtnRef.current?.focus();
         }
       }
+      if (e.key === "Escape") {
+        onCancel();
+      }
     };
     document.addEventListener("keydown", handleKeydown);
 
     return () => {
       document.removeEventListener("keydown", handleKeydown);
     };
-  }, []);
+  }, [onCancel]);
 
   useEffect(() => {
     document.body.style.overflow = isVisible ? "hidden" : "";
