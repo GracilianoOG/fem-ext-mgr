@@ -1,3 +1,4 @@
+import { useId } from "react";
 import {
   BorderButtonStyled,
   DangerButtonStyled,
@@ -22,12 +23,18 @@ const ConfirmModal = ({
   onConfirm,
   onCancel,
 }: ConfirmModalProps) => {
+  const textId = useId();
+
   if (!isVisible) return null;
 
   return (
-    <ConfirmModalStyled aria-modal="true" role="dialog">
+    <ConfirmModalStyled
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby={textId}
+    >
       <div>
-        <h2>{title}</h2>
+        <h2 id={textId}>{title}</h2>
         <p>{description}</p>
         <ConfirmModalButtonsStyled>
           <BorderButtonStyled onClick={onCancel}>Cancel</BorderButtonStyled>
