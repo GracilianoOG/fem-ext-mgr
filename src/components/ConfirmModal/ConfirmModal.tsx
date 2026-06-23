@@ -32,8 +32,9 @@ const ConfirmModal = ({
       aria-modal="true"
       role="dialog"
       aria-labelledby={textId}
+      onClick={onCancel}
     >
-      <div>
+      <div onClick={(e) => e.stopPropagation()}>
         <span id={textId}>
           <h2>{title}</h2>
           <p>{description}</p>
