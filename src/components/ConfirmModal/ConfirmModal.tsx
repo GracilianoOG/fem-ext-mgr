@@ -29,7 +29,7 @@ const ConfirmModal = ({
   onConfirm,
   onCancel,
 }: ConfirmModalProps) => {
-  const textId = useId();
+  const titleId = useId();
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const confirmBtnRef = useRef<HTMLButtonElement>(null);
 
@@ -67,11 +67,11 @@ const ConfirmModal = ({
     <ConfirmModalStyled
       aria-modal="true"
       role="dialog"
-      aria-labelledby={textId}
+      aria-labelledby={titleId}
       onClick={handleBackdropClick}
     >
       <div onClick={(e) => e.stopPropagation()}>
-        <span id={textId}>
+        <span id={titleId}>
           <h2>{title}</h2>
           <p>{description}</p>
         </span>
