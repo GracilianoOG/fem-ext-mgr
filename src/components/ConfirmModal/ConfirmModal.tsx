@@ -30,6 +30,7 @@ const ConfirmModal = ({
   onCancel,
 }: ConfirmModalProps) => {
   const titleId = useId();
+  const descId = useId();
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const confirmBtnRef = useRef<HTMLButtonElement>(null);
 
@@ -68,13 +69,12 @@ const ConfirmModal = ({
       aria-modal="true"
       role="dialog"
       aria-labelledby={titleId}
+      aria-describedby={descId}
       onClick={handleBackdropClick}
     >
       <div onClick={(e) => e.stopPropagation()}>
-        <span id={titleId}>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </span>
+        <h2 id={titleId}>{title}</h2>
+        <p id={descId}>{description}</p>
         <ConfirmModalButtonsStyled>
           <BorderButtonStyled ref={closeBtnRef} onClick={onCancel} autoFocus>
             {cancelText ?? "Cancel"}
