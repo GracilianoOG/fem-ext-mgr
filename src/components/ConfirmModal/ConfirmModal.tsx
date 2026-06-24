@@ -7,6 +7,7 @@ import {
   ConfirmModalButtonsStyled,
   ConfirmModalStyled,
 } from "./ConfirmModal.styled";
+import { createPortal } from "react-dom";
 
 interface ConfirmModalProps {
   isVisible: boolean;
@@ -65,26 +66,35 @@ const ConfirmModal = ({
   if (!isVisible) return null;
 
   return (
-    <ConfirmModalStyled
-      aria-modal="true"
-      role="dialog"
-      aria-labelledby={titleId}
-      aria-describedby={descId}
-      onClick={handleBackdropClick}
-    >
-      <div onClick={(e) => e.stopPropagation()}>
-        <h2 id={titleId}>{title}</h2>
-        <p id={descId}>{description}</p>
-        <ConfirmModalButtonsStyled>
-          <BorderButtonStyled ref={closeBtnRef} onClick={onCancel} autoFocus>
-            {cancelText ?? "Cancel"}
-          </BorderButtonStyled>
-          <DangerButtonStyled ref={confirmBtnRef} onClick={onConfirm}>
-            {confirmText ?? "Confirm"}
-          </DangerButtonStyled>
-        </ConfirmModalButtonsStyled>
-      </div>
-    </ConfirmModalStyled>
+    <>
+      {createPortal(
+        <ConfirmModalStyled
+          aria-modal="true"
+          role="dialog"
+          aria-labelledby={titleId}
+          aria-describedby={descId}
+          onClick={handleBackdropClick}
+        >
+          <div onClick={(e) => e.stopPropagation()}>
+            <h2 id={titleId}>{title}</h2>
+            <p id={descId}>{description}</p>
+            <ConfirmModalButtonsStyled>
+              <BorderButtonStyled
+                ref={closeBtnRef}
+                onClick={onCancel}
+                autoFocus
+              >
+                {cancelText ?? "Cancel"}
+              </BorderButtonStyled>
+              <DangerButtonStyled ref={confirmBtnRef} onClick={onConfirm}>
+                {confirmText ?? "Confirm"}
+              </DangerButtonStyled>
+            </ConfirmModalButtonsStyled>
+          </div>
+        </ConfirmModalStyled>,
+        document.body,
+      )}
+    </>
   );
 };
 
