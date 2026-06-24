@@ -34,6 +34,8 @@ const ConfirmModal = ({
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const confirmBtnRef = useRef<HTMLButtonElement>(null);
 
+  const handleBackdropClick = () => closeOnBackdropClick && onCancel();
+
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
       if (e.key === "Tab") {
@@ -59,8 +61,6 @@ const ConfirmModal = ({
   useEffect(() => {
     document.body.style.overflow = isVisible ? "hidden" : "";
   }, [isVisible]);
-
-  const handleBackdropClick = () => closeOnBackdropClick && onCancel();
 
   if (!isVisible) return null;
 
