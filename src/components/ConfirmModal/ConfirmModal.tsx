@@ -14,6 +14,7 @@ interface ConfirmModalProps {
   description: string;
   confirmText?: string;
   cancelText?: string;
+  closeOnBackdropClick?: boolean;
   onConfirm: () => void;
   onCancel: () => void;
 }
@@ -24,6 +25,7 @@ const ConfirmModal = ({
   description,
   confirmText,
   cancelText,
+  closeOnBackdropClick = true,
   onConfirm,
   onCancel,
 }: ConfirmModalProps) => {
@@ -57,6 +59,8 @@ const ConfirmModal = ({
     document.body.style.overflow = isVisible ? "hidden" : "";
   }, [isVisible]);
 
+  const handleBackdropClick = () => closeOnBackdropClick && onCancel();
+
   if (!isVisible) return null;
 
   return (
@@ -64,7 +68,7 @@ const ConfirmModal = ({
       aria-modal="true"
       role="dialog"
       aria-labelledby={textId}
-      onClick={onCancel}
+      onClick={handleBackdropClick}
     >
       <div onClick={(e) => e.stopPropagation()}>
         <span id={textId}>
